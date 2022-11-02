@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Saper: Исходный файл src/game_objects/field_cell.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Saper<span id="projectnumber">&#160;01</span>
+   </div>
+   <div id="projectbrief">Классический Сапер с функцией просмотра прошлой игры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('field__cell_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">field_cell.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="field__cell_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SAPER_FIELD_CELL_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SAPER_FIELD_CELL_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtWidgets&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QtSvg&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_field_cell.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_field_cell.html">FieldCell</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QGraphicsRectItem {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    Q_OBJECT</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="class_field_cell.html">FieldCell</a>(<span class="keywordtype">int</span> rowId_, <span class="keywordtype">int</span> colId_, qreal width_, qreal height_, QGraphicsItem *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#af2f14b236cca357c11205fdce3c8a27f">FieldCell::paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_field_cell.html#a80bd891dc7544085ad5f79595e5c13c8">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_field_cell.html#a80bd891dc7544085ad5f79595e5c13c8">getRowId</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a>; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_field_cell.html#a1dad52b28b151663aa7102b85bb558a7">   18</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_field_cell.html#a1dad52b28b151663aa7102b85bb558a7">getColId</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a>; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_field_cell.html#a506ed41661a5ec5f13b71c85b029efbc">   20</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_field_cell.html#a506ed41661a5ec5f13b71c85b029efbc">getIsBomb</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_field_cell.html#a7aed5ca86023105d3ca156c7ae677eec">isBomb</a>; };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_field_cell.html#ac1383024e949ee86e68a4025a1a5575f">   22</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_field_cell.html#ac1383024e949ee86e68a4025a1a5575f">getIsOpened</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_field_cell.html#a45f2406f3b7646c0264e805686144f34">isOpened</a>; }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_field_cell.html#abcba9c6eaedfa26515f2c4a1f7bb0a9a">   24</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_field_cell.html#abcba9c6eaedfa26515f2c4a1f7bb0a9a">getIsFlagged</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_field_cell.html#a13f04ae0bde8006c914fc89132933528">isFlagged</a>; }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_field_cell.html#aa326ea42495b2818d831789b1dcb9fe0">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_field_cell.html#aa326ea42495b2818d831789b1dcb9fe0">getCellNumber</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">cellNumber</a>; }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#a1115ac67912a24b8e5aa2daccd61d096">setCellNumber</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">cellNumber</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#ae2cf3a4d88ce8444108d28da15b72c56">setBomb</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#a595bc01abc2f5ca6867fcf9e32c420f1">explode</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#abd5c7a85a7012141a968027563429a1e">setFlag</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8">open</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_field_cell.html#a60a76b0f5ad57ebf70abae3011f468bc">mousePressEvent</a>(QGraphicsSceneMouseEvent *event);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_field_cell.html#a49b2e869d915cece144ef5b3d98a1b58">   44</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#a49b2e869d915cece144ef5b3d98a1b58">size</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_field_cell.html#ad8a0f7c1bfe4f3510737c3f41638d8b0">   45</a></span>    QGraphicsTextItem* <a class="code hl_variable" href="class_field_cell.html#ad8a0f7c1bfe4f3510737c3f41638d8b0">cellNumberText</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_field_cell.html#a7aed5ca86023105d3ca156c7ae677eec">   47</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_field_cell.html#a7aed5ca86023105d3ca156c7ae677eec">isBomb</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_field_cell.html#a413e1185cf6b582e4c2d93327019e953">   48</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_field_cell.html#a413e1185cf6b582e4c2d93327019e953">isExploded</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_field_cell.html#a45f2406f3b7646c0264e805686144f34">   49</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_field_cell.html#a45f2406f3b7646c0264e805686144f34">isOpened</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_field_cell.html#a13f04ae0bde8006c914fc89132933528">   50</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_field_cell.html#a13f04ae0bde8006c914fc89132933528">isFlagged</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_field_cell.html#a067f8e859d73bfd5971c319a24dd93b8">   51</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_field_cell.html#a067f8e859d73bfd5971c319a24dd93b8">isOpenedNumber</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">   52</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">cellNumber</a> = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>signals:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd">leftCellClick</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_field_cell.html#ac4a0bbb38d2b36af52815bfa4d085173">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_field_cell.html#ac4a0bbb38d2b36af52815bfa4d085173">rightCellClick</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">//SAPER_FIELD_CELL_H</span></div>
+<div class="ttc" id="aclass_field_cell_html"><div class="ttname"><a href="class_field_cell.html">FieldCell</a></div><div class="ttdoc">Класс игровой ячейки, наследуемый от QGraphicsRectItem.</div><div class="ttdef"><b>Definition:</b> field_cell.h:9</div></div>
+<div class="ttc" id="aclass_field_cell_html_a067f8e859d73bfd5971c319a24dd93b8"><div class="ttname"><a href="class_field_cell.html#a067f8e859d73bfd5971c319a24dd93b8">FieldCell::isOpenedNumber</a></div><div class="ttdeci">bool isOpenedNumber</div><div class="ttdef"><b>Definition:</b> field_cell.h:51</div></div>
+<div class="ttc" id="aclass_field_cell_html_a1041e391c0bd4e7108689451edfaf576"><div class="ttname"><a href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">FieldCell::colId</a></div><div class="ttdeci">int colId</div><div class="ttdef"><b>Definition:</b> field_cell.h:43</div></div>
+<div class="ttc" id="aclass_field_cell_html_a1115ac67912a24b8e5aa2daccd61d096"><div class="ttname"><a href="class_field_cell.html#a1115ac67912a24b8e5aa2daccd61d096">FieldCell::setCellNumber</a></div><div class="ttdeci">void setCellNumber(int cellNumber)</div><div class="ttdoc">Сеттер переменной cellNumber.</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:84</div></div>
+<div class="ttc" id="aclass_field_cell_html_a13f04ae0bde8006c914fc89132933528"><div class="ttname"><a href="class_field_cell.html#a13f04ae0bde8006c914fc89132933528">FieldCell::isFlagged</a></div><div class="ttdeci">bool isFlagged</div><div class="ttdef"><b>Definition:</b> field_cell.h:50</div></div>
+<div class="ttc" id="aclass_field_cell_html_a1dad52b28b151663aa7102b85bb558a7"><div class="ttname"><a href="class_field_cell.html#a1dad52b28b151663aa7102b85bb558a7">FieldCell::getColId</a></div><div class="ttdeci">int getColId()</div><div class="ttdoc">Геттер переменной ColId.</div><div class="ttdef"><b>Definition:</b> field_cell.h:18</div></div>
+<div class="ttc" id="aclass_field_cell_html_a1ffa4a7265da21c2743abd6568385ce8"><div class="ttname"><a href="class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8">FieldCell::open</a></div><div class="ttdeci">void open()</div><div class="ttdoc">Сеттер переменной isOpened.</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:73</div></div>
+<div class="ttc" id="aclass_field_cell_html_a413e1185cf6b582e4c2d93327019e953"><div class="ttname"><a href="class_field_cell.html#a413e1185cf6b582e4c2d93327019e953">FieldCell::isExploded</a></div><div class="ttdeci">bool isExploded</div><div class="ttdef"><b>Definition:</b> field_cell.h:48</div></div>
+<div class="ttc" id="aclass_field_cell_html_a45f2406f3b7646c0264e805686144f34"><div class="ttname"><a href="class_field_cell.html#a45f2406f3b7646c0264e805686144f34">FieldCell::isOpened</a></div><div class="ttdeci">bool isOpened</div><div class="ttdef"><b>Definition:</b> field_cell.h:49</div></div>
+<div class="ttc" id="aclass_field_cell_html_a49b2e869d915cece144ef5b3d98a1b58"><div class="ttname"><a href="class_field_cell.html#a49b2e869d915cece144ef5b3d98a1b58">FieldCell::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> field_cell.h:44</div></div>
+<div class="ttc" id="aclass_field_cell_html_a506ed41661a5ec5f13b71c85b029efbc"><div class="ttname"><a href="class_field_cell.html#a506ed41661a5ec5f13b71c85b029efbc">FieldCell::getIsBomb</a></div><div class="ttdeci">bool getIsBomb()</div><div class="ttdoc">Геттер переменной isBomb.</div><div class="ttdef"><b>Definition:</b> field_cell.h:20</div></div>
+<div class="ttc" id="aclass_field_cell_html_a595bc01abc2f5ca6867fcf9e32c420f1"><div class="ttname"><a href="class_field_cell.html#a595bc01abc2f5ca6867fcf9e32c420f1">FieldCell::explode</a></div><div class="ttdeci">void explode()</div><div class="ttdoc">Сеттер переменной isExploded.</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:69</div></div>
+<div class="ttc" id="aclass_field_cell_html_a60a76b0f5ad57ebf70abae3011f468bc"><div class="ttname"><a href="class_field_cell.html#a60a76b0f5ad57ebf70abae3011f468bc">FieldCell::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QGraphicsSceneMouseEvent *event)</div><div class="ttdoc">Переопределенная функция нажатия на ячейку</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:89</div></div>
+<div class="ttc" id="aclass_field_cell_html_a7376431e7ff5fe9b432f886196ee1b3c"><div class="ttname"><a href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">FieldCell::cellNumber</a></div><div class="ttdeci">int cellNumber</div><div class="ttdef"><b>Definition:</b> field_cell.h:52</div></div>
+<div class="ttc" id="aclass_field_cell_html_a7aed5ca86023105d3ca156c7ae677eec"><div class="ttname"><a href="class_field_cell.html#a7aed5ca86023105d3ca156c7ae677eec">FieldCell::isBomb</a></div><div class="ttdeci">bool isBomb</div><div class="ttdef"><b>Definition:</b> field_cell.h:47</div></div>
+<div class="ttc" id="aclass_field_cell_html_a80bd891dc7544085ad5f79595e5c13c8"><div class="ttname"><a href="class_field_cell.html#a80bd891dc7544085ad5f79595e5c13c8">FieldCell::getRowId</a></div><div class="ttdeci">int getRowId()</div><div class="ttdoc">Геттер переменной rowId.</div><div class="ttdef"><b>Definition:</b> field_cell.h:16</div></div>
+<div class="ttc" id="aclass_field_cell_html_aa326ea42495b2818d831789b1dcb9fe0"><div class="ttname"><a href="class_field_cell.html#aa326ea42495b2818d831789b1dcb9fe0">FieldCell::getCellNumber</a></div><div class="ttdeci">int getCellNumber()</div><div class="ttdoc">Геттер переменной cellNumber.</div><div class="ttdef"><b>Definition:</b> field_cell.h:26</div></div>
+<div class="ttc" id="aclass_field_cell_html_abcba9c6eaedfa26515f2c4a1f7bb0a9a"><div class="ttname"><a href="class_field_cell.html#abcba9c6eaedfa26515f2c4a1f7bb0a9a">FieldCell::getIsFlagged</a></div><div class="ttdeci">bool getIsFlagged()</div><div class="ttdoc">Геттер переменной isFlagged.</div><div class="ttdef"><b>Definition:</b> field_cell.h:24</div></div>
+<div class="ttc" id="aclass_field_cell_html_abd5c7a85a7012141a968027563429a1e"><div class="ttname"><a href="class_field_cell.html#abd5c7a85a7012141a968027563429a1e">FieldCell::setFlag</a></div><div class="ttdeci">void setFlag()</div><div class="ttdoc">Сеттер переменной isFlagged.</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:64</div></div>
+<div class="ttc" id="aclass_field_cell_html_ac1383024e949ee86e68a4025a1a5575f"><div class="ttname"><a href="class_field_cell.html#ac1383024e949ee86e68a4025a1a5575f">FieldCell::getIsOpened</a></div><div class="ttdeci">bool getIsOpened()</div><div class="ttdoc">Геттер переменной isOpened.</div><div class="ttdef"><b>Definition:</b> field_cell.h:22</div></div>
+<div class="ttc" id="aclass_field_cell_html_ac4a0bbb38d2b36af52815bfa4d085173"><div class="ttname"><a href="class_field_cell.html#ac4a0bbb38d2b36af52815bfa4d085173">FieldCell::rightCellClick</a></div><div class="ttdeci">void rightCellClick(int rowId, int colId)</div><div class="ttdoc">Сигнал о нажатии правой кнопкой мыши по ячейке</div></div>
+<div class="ttc" id="aclass_field_cell_html_acd26dd456427593bd52cb7abc6352075"><div class="ttname"><a href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">FieldCell::rowId</a></div><div class="ttdeci">int rowId</div><div class="ttdef"><b>Definition:</b> field_cell.h:42</div></div>
+<div class="ttc" id="aclass_field_cell_html_ad8a0f7c1bfe4f3510737c3f41638d8b0"><div class="ttname"><a href="class_field_cell.html#ad8a0f7c1bfe4f3510737c3f41638d8b0">FieldCell::cellNumberText</a></div><div class="ttdeci">QGraphicsTextItem * cellNumberText</div><div class="ttdef"><b>Definition:</b> field_cell.h:45</div></div>
+<div class="ttc" id="aclass_field_cell_html_ae2cf3a4d88ce8444108d28da15b72c56"><div class="ttname"><a href="class_field_cell.html#ae2cf3a4d88ce8444108d28da15b72c56">FieldCell::setBomb</a></div><div class="ttdeci">void setBomb()</div><div class="ttdoc">Сеттер переменной isBomb.</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:59</div></div>
+<div class="ttc" id="aclass_field_cell_html_aee1535b98821d6b8c53f76b90e57f7cd"><div class="ttname"><a href="class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd">FieldCell::leftCellClick</a></div><div class="ttdeci">void leftCellClick(int rowId, int colId)</div><div class="ttdoc">Сигнал о нажатии левой кнопкой мыши по ячейке</div></div>
+<div class="ttc" id="aclass_field_cell_html_af2f14b236cca357c11205fdce3c8a27f"><div class="ttname"><a href="class_field_cell.html#af2f14b236cca357c11205fdce3c8a27f">FieldCell::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *)</div><div class="ttdoc">Переопределенная функция рисования ячейки</div><div class="ttdef"><b>Definition:</b> field_cell.cpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9e985127bb1fb8b84a20fe56d9821ed1.html">game_objects</a></li><li class="navelem"><a class="el" href="field__cell_8h.html">field_cell.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

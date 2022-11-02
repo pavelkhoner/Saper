@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Saper: Класс FieldCell</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Saper<span id="projectnumber">&#160;01</span>
+   </div>
+   <div id="projectbrief">Классический Сапер с функцией просмотра прошлой игры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_field_cell.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="class_field_cell-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс FieldCell</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс игровой ячейки, наследуемый от QGraphicsRectItem.  
+ <a href="class_field_cell.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="field__cell_8h_source.html">field_cell.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:FieldCell:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_field_cell.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:aee1535b98821d6b8c53f76b90e57f7cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd">leftCellClick</a> (int <a class="el" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a>, int <a class="el" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a>)</td></tr>
+<tr class="memdesc:aee1535b98821d6b8c53f76b90e57f7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал о нажатии левой кнопкой мыши по ячейке  <a href="class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee1535b98821d6b8c53f76b90e57f7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a0bbb38d2b36af52815bfa4d085173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#ac4a0bbb38d2b36af52815bfa4d085173">rightCellClick</a> (int <a class="el" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a>, int <a class="el" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a>)</td></tr>
+<tr class="memdesc:ac4a0bbb38d2b36af52815bfa4d085173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал о нажатии правой кнопкой мыши по ячейке  <a href="class_field_cell.html#ac4a0bbb38d2b36af52815bfa4d085173">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac4a0bbb38d2b36af52815bfa4d085173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab72c9f02259dfea9de7477b531250a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#ab72c9f02259dfea9de7477b531250a3e">FieldCell</a> (int rowId_, int colId_, qreal width_, qreal height_, QGraphicsItem *parent=nullptr)</td></tr>
+<tr class="separator:ab72c9f02259dfea9de7477b531250a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f14b236cca357c11205fdce3c8a27f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#af2f14b236cca357c11205fdce3c8a27f">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *)</td></tr>
+<tr class="memdesc:af2f14b236cca357c11205fdce3c8a27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переопределенная функция рисования ячейки  <a href="class_field_cell.html#af2f14b236cca357c11205fdce3c8a27f">Подробнее...</a><br /></td></tr>
+<tr class="separator:af2f14b236cca357c11205fdce3c8a27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bd891dc7544085ad5f79595e5c13c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a80bd891dc7544085ad5f79595e5c13c8">getRowId</a> ()</td></tr>
+<tr class="memdesc:a80bd891dc7544085ad5f79595e5c13c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер переменной rowId.  <a href="class_field_cell.html#a80bd891dc7544085ad5f79595e5c13c8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a80bd891dc7544085ad5f79595e5c13c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dad52b28b151663aa7102b85bb558a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a1dad52b28b151663aa7102b85bb558a7">getColId</a> ()</td></tr>
+<tr class="memdesc:a1dad52b28b151663aa7102b85bb558a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер переменной ColId.  <a href="class_field_cell.html#a1dad52b28b151663aa7102b85bb558a7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1dad52b28b151663aa7102b85bb558a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506ed41661a5ec5f13b71c85b029efbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a506ed41661a5ec5f13b71c85b029efbc">getIsBomb</a> ()</td></tr>
+<tr class="memdesc:a506ed41661a5ec5f13b71c85b029efbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер переменной isBomb.  <a href="class_field_cell.html#a506ed41661a5ec5f13b71c85b029efbc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a506ed41661a5ec5f13b71c85b029efbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1383024e949ee86e68a4025a1a5575f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#ac1383024e949ee86e68a4025a1a5575f">getIsOpened</a> ()</td></tr>
+<tr class="memdesc:ac1383024e949ee86e68a4025a1a5575f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер переменной isOpened.  <a href="class_field_cell.html#ac1383024e949ee86e68a4025a1a5575f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac1383024e949ee86e68a4025a1a5575f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcba9c6eaedfa26515f2c4a1f7bb0a9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#abcba9c6eaedfa26515f2c4a1f7bb0a9a">getIsFlagged</a> ()</td></tr>
+<tr class="memdesc:abcba9c6eaedfa26515f2c4a1f7bb0a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер переменной isFlagged.  <a href="class_field_cell.html#abcba9c6eaedfa26515f2c4a1f7bb0a9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:abcba9c6eaedfa26515f2c4a1f7bb0a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa326ea42495b2818d831789b1dcb9fe0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#aa326ea42495b2818d831789b1dcb9fe0">getCellNumber</a> ()</td></tr>
+<tr class="memdesc:aa326ea42495b2818d831789b1dcb9fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер переменной cellNumber.  <a href="class_field_cell.html#aa326ea42495b2818d831789b1dcb9fe0">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa326ea42495b2818d831789b1dcb9fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1115ac67912a24b8e5aa2daccd61d096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a1115ac67912a24b8e5aa2daccd61d096">setCellNumber</a> (int <a class="el" href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">cellNumber</a>)</td></tr>
+<tr class="memdesc:a1115ac67912a24b8e5aa2daccd61d096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сеттер переменной cellNumber.  <a href="class_field_cell.html#a1115ac67912a24b8e5aa2daccd61d096">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1115ac67912a24b8e5aa2daccd61d096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2cf3a4d88ce8444108d28da15b72c56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#ae2cf3a4d88ce8444108d28da15b72c56">setBomb</a> ()</td></tr>
+<tr class="memdesc:ae2cf3a4d88ce8444108d28da15b72c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сеттер переменной isBomb.  <a href="class_field_cell.html#ae2cf3a4d88ce8444108d28da15b72c56">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae2cf3a4d88ce8444108d28da15b72c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595bc01abc2f5ca6867fcf9e32c420f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a595bc01abc2f5ca6867fcf9e32c420f1">explode</a> ()</td></tr>
+<tr class="memdesc:a595bc01abc2f5ca6867fcf9e32c420f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сеттер переменной isExploded.  <a href="class_field_cell.html#a595bc01abc2f5ca6867fcf9e32c420f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a595bc01abc2f5ca6867fcf9e32c420f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5c7a85a7012141a968027563429a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#abd5c7a85a7012141a968027563429a1e">setFlag</a> ()</td></tr>
+<tr class="memdesc:abd5c7a85a7012141a968027563429a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сеттер переменной isFlagged.  <a href="class_field_cell.html#abd5c7a85a7012141a968027563429a1e">Подробнее...</a><br /></td></tr>
+<tr class="separator:abd5c7a85a7012141a968027563429a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ffa4a7265da21c2743abd6568385ce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8">open</a> ()</td></tr>
+<tr class="memdesc:a1ffa4a7265da21c2743abd6568385ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сеттер переменной isOpened.  <a href="class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ffa4a7265da21c2743abd6568385ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a76b0f5ad57ebf70abae3011f468bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a60a76b0f5ad57ebf70abae3011f468bc">mousePressEvent</a> (QGraphicsSceneMouseEvent *event)</td></tr>
+<tr class="memdesc:a60a76b0f5ad57ebf70abae3011f468bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переопределенная функция нажатия на ячейку  <a href="class_field_cell.html#a60a76b0f5ad57ebf70abae3011f468bc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a60a76b0f5ad57ebf70abae3011f468bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:acd26dd456427593bd52cb7abc6352075"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#acd26dd456427593bd52cb7abc6352075">rowId</a></td></tr>
+<tr class="separator:acd26dd456427593bd52cb7abc6352075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1041e391c0bd4e7108689451edfaf576"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a1041e391c0bd4e7108689451edfaf576">colId</a></td></tr>
+<tr class="separator:a1041e391c0bd4e7108689451edfaf576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b2e869d915cece144ef5b3d98a1b58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a49b2e869d915cece144ef5b3d98a1b58">size</a></td></tr>
+<tr class="separator:a49b2e869d915cece144ef5b3d98a1b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a0f7c1bfe4f3510737c3f41638d8b0"><td class="memItemLeft" align="right" valign="top">QGraphicsTextItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#ad8a0f7c1bfe4f3510737c3f41638d8b0">cellNumberText</a></td></tr>
+<tr class="separator:ad8a0f7c1bfe4f3510737c3f41638d8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aed5ca86023105d3ca156c7ae677eec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a7aed5ca86023105d3ca156c7ae677eec">isBomb</a> = false</td></tr>
+<tr class="separator:a7aed5ca86023105d3ca156c7ae677eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413e1185cf6b582e4c2d93327019e953"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a413e1185cf6b582e4c2d93327019e953">isExploded</a> = false</td></tr>
+<tr class="separator:a413e1185cf6b582e4c2d93327019e953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f2406f3b7646c0264e805686144f34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a45f2406f3b7646c0264e805686144f34">isOpened</a> = false</td></tr>
+<tr class="separator:a45f2406f3b7646c0264e805686144f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f04ae0bde8006c914fc89132933528"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a13f04ae0bde8006c914fc89132933528">isFlagged</a> = false</td></tr>
+<tr class="separator:a13f04ae0bde8006c914fc89132933528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067f8e859d73bfd5971c319a24dd93b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a067f8e859d73bfd5971c319a24dd93b8">isOpenedNumber</a> = false</td></tr>
+<tr class="separator:a067f8e859d73bfd5971c319a24dd93b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7376431e7ff5fe9b432f886196ee1b3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field_cell.html#a7376431e7ff5fe9b432f886196ee1b3c">cellNumber</a> = 0</td></tr>
+<tr class="separator:a7376431e7ff5fe9b432f886196ee1b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс игровой ячейки, наследуемый от QGraphicsRectItem. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab72c9f02259dfea9de7477b531250a3e" name="ab72c9f02259dfea9de7477b531250a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72c9f02259dfea9de7477b531250a3e">&#9670;&#160;</a></span>FieldCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FieldCell::FieldCell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rowId_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>colId_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qreal&#160;</td>
+          <td class="paramname"><em>width_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qreal&#160;</td>
+          <td class="paramname"><em>height_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a595bc01abc2f5ca6867fcf9e32c420f1" name="a595bc01abc2f5ca6867fcf9e32c420f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595bc01abc2f5ca6867fcf9e32c420f1">&#9670;&#160;</a></span>explode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::explode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сеттер переменной isExploded. </p>
+
+</div>
+</div>
+<a id="aa326ea42495b2818d831789b1dcb9fe0" name="aa326ea42495b2818d831789b1dcb9fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa326ea42495b2818d831789b1dcb9fe0">&#9670;&#160;</a></span>getCellNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::getCellNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Геттер переменной cellNumber. </p>
+
+</div>
+</div>
+<a id="a1dad52b28b151663aa7102b85bb558a7" name="a1dad52b28b151663aa7102b85bb558a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dad52b28b151663aa7102b85bb558a7">&#9670;&#160;</a></span>getColId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::getColId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Геттер переменной ColId. </p>
+
+</div>
+</div>
+<a id="a506ed41661a5ec5f13b71c85b029efbc" name="a506ed41661a5ec5f13b71c85b029efbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506ed41661a5ec5f13b71c85b029efbc">&#9670;&#160;</a></span>getIsBomb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::getIsBomb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Геттер переменной isBomb. </p>
+
+</div>
+</div>
+<a id="abcba9c6eaedfa26515f2c4a1f7bb0a9a" name="abcba9c6eaedfa26515f2c4a1f7bb0a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcba9c6eaedfa26515f2c4a1f7bb0a9a">&#9670;&#160;</a></span>getIsFlagged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::getIsFlagged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Геттер переменной isFlagged. </p>
+
+</div>
+</div>
+<a id="ac1383024e949ee86e68a4025a1a5575f" name="ac1383024e949ee86e68a4025a1a5575f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1383024e949ee86e68a4025a1a5575f">&#9670;&#160;</a></span>getIsOpened()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::getIsOpened </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Геттер переменной isOpened. </p>
+
+</div>
+</div>
+<a id="a80bd891dc7544085ad5f79595e5c13c8" name="a80bd891dc7544085ad5f79595e5c13c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bd891dc7544085ad5f79595e5c13c8">&#9670;&#160;</a></span>getRowId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::getRowId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Геттер переменной rowId. </p>
+
+</div>
+</div>
+<a id="aee1535b98821d6b8c53f76b90e57f7cd" name="aee1535b98821d6b8c53f76b90e57f7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1535b98821d6b8c53f76b90e57f7cd">&#9670;&#160;</a></span>leftCellClick</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::leftCellClick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rowId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>colId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал о нажатии левой кнопкой мыши по ячейке </p>
+
+</div>
+</div>
+<a id="a60a76b0f5ad57ebf70abae3011f468bc" name="a60a76b0f5ad57ebf70abae3011f468bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a76b0f5ad57ebf70abae3011f468bc">&#9670;&#160;</a></span>mousePressEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::mousePressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Переопределенная функция нажатия на ячейку </p>
+
+</div>
+</div>
+<a id="a1ffa4a7265da21c2743abd6568385ce8" name="a1ffa4a7265da21c2743abd6568385ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ffa4a7265da21c2743abd6568385ce8">&#9670;&#160;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сеттер переменной isOpened. </p>
+
+</div>
+</div>
+<a id="af2f14b236cca357c11205fdce3c8a27f" name="af2f14b236cca357c11205fdce3c8a27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f14b236cca357c11205fdce3c8a27f">&#9670;&#160;</a></span>paint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Переопределенная функция рисования ячейки </p>
+
+</div>
+</div>
+<a id="ac4a0bbb38d2b36af52815bfa4d085173" name="ac4a0bbb38d2b36af52815bfa4d085173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a0bbb38d2b36af52815bfa4d085173">&#9670;&#160;</a></span>rightCellClick</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::rightCellClick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rowId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>colId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал о нажатии правой кнопкой мыши по ячейке </p>
+
+</div>
+</div>
+<a id="ae2cf3a4d88ce8444108d28da15b72c56" name="ae2cf3a4d88ce8444108d28da15b72c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2cf3a4d88ce8444108d28da15b72c56">&#9670;&#160;</a></span>setBomb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::setBomb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сеттер переменной isBomb. </p>
+
+</div>
+</div>
+<a id="a1115ac67912a24b8e5aa2daccd61d096" name="a1115ac67912a24b8e5aa2daccd61d096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1115ac67912a24b8e5aa2daccd61d096">&#9670;&#160;</a></span>setCellNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::setCellNumber </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cellNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сеттер переменной cellNumber. </p>
+
+</div>
+</div>
+<a id="abd5c7a85a7012141a968027563429a1e" name="abd5c7a85a7012141a968027563429a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd5c7a85a7012141a968027563429a1e">&#9670;&#160;</a></span>setFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FieldCell::setFlag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сеттер переменной isFlagged. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a7376431e7ff5fe9b432f886196ee1b3c" name="a7376431e7ff5fe9b432f886196ee1b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7376431e7ff5fe9b432f886196ee1b3c">&#9670;&#160;</a></span>cellNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::cellNumber = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8a0f7c1bfe4f3510737c3f41638d8b0" name="ad8a0f7c1bfe4f3510737c3f41638d8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a0f7c1bfe4f3510737c3f41638d8b0">&#9670;&#160;</a></span>cellNumberText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QGraphicsTextItem* FieldCell::cellNumberText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1041e391c0bd4e7108689451edfaf576" name="a1041e391c0bd4e7108689451edfaf576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1041e391c0bd4e7108689451edfaf576">&#9670;&#160;</a></span>colId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::colId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aed5ca86023105d3ca156c7ae677eec" name="a7aed5ca86023105d3ca156c7ae677eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aed5ca86023105d3ca156c7ae677eec">&#9670;&#160;</a></span>isBomb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::isBomb = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a413e1185cf6b582e4c2d93327019e953" name="a413e1185cf6b582e4c2d93327019e953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413e1185cf6b582e4c2d93327019e953">&#9670;&#160;</a></span>isExploded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::isExploded = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13f04ae0bde8006c914fc89132933528" name="a13f04ae0bde8006c914fc89132933528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f04ae0bde8006c914fc89132933528">&#9670;&#160;</a></span>isFlagged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::isFlagged = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45f2406f3b7646c0264e805686144f34" name="a45f2406f3b7646c0264e805686144f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f2406f3b7646c0264e805686144f34">&#9670;&#160;</a></span>isOpened</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::isOpened = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a067f8e859d73bfd5971c319a24dd93b8" name="a067f8e859d73bfd5971c319a24dd93b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a067f8e859d73bfd5971c319a24dd93b8">&#9670;&#160;</a></span>isOpenedNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FieldCell::isOpenedNumber = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd26dd456427593bd52cb7abc6352075" name="acd26dd456427593bd52cb7abc6352075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd26dd456427593bd52cb7abc6352075">&#9670;&#160;</a></span>rowId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::rowId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49b2e869d915cece144ef5b3d98a1b58" name="a49b2e869d915cece144ef5b3d98a1b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b2e869d915cece144ef5b3d98a1b58">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FieldCell::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/game_objects/<a class="el" href="field__cell_8h_source.html">field_cell.h</a></li>
+<li>src/game_objects/<a class="el" href="field__cell_8cpp.html">field_cell.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_field_cell.html">FieldCell</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

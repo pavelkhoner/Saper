@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Saper: Исходный файл src/game_field.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Saper<span id="projectnumber">&#160;01</span>
+   </div>
+   <div id="projectbrief">Классический Сапер с функцией просмотра прошлой игры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('game__field_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">game_field.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game__field_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SAPER_GAME_FIELD_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SAPER_GAME_FIELD_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../ui/ui_game_field.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="field__cell_8h.html">game_objects/field_cell.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="game__over_8h.html">./game_over.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtSql&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_game_field.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_game_field.html">GameField</a> : <span class="keyword">public</span> QMainWindow {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>Q_OBJECT</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_game_field.html">GameField</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_game_field.html#a7070fd755281aa880b210ec5f1c94f1a">   18</a></span>    Ui_GameField <a class="code hl_variable" href="class_game_field.html#a7070fd755281aa880b210ec5f1c94f1a">ui</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_game_field.html#a11f7f876a7d14e365d63239095e68be1">   19</a></span>    QGraphicsScene* <a class="code hl_variable" href="class_game_field.html#a11f7f876a7d14e365d63239095e68be1">scene</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_game_field.html#aad19c17b437259c1fc845ddfb2e99955">   20</a></span>    QVector&lt;QVector&lt;FieldCell*&gt;&gt; <a class="code hl_variable" href="class_game_field.html#aad19c17b437259c1fc845ddfb2e99955">fieldCells</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_game_field.html#a233385a46f515f7596a7067df4ff5381">   22</a></span>    std::map&lt;std::string, std::map&lt;std::string, int&gt;&gt; <a class="code hl_variable" href="class_game_field.html#a233385a46f515f7596a7067df4ff5381">difficulties</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_game_field.html#a8e51ad934e0df26c181022d2bccb07c3">   23</a></span>    std::map&lt;std::string, int&gt; <a class="code hl_variable" href="class_game_field.html#a8e51ad934e0df26c181022d2bccb07c3">currentDifficulty</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_game_field.html#a5f1d70878b9622a29bc35644667a1f16">   25</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a5f1d70878b9622a29bc35644667a1f16">width</a> = 300;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_game_field.html#a70192ecc44bb397865f239233b75ddb4">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a70192ecc44bb397865f239233b75ddb4">height</a> = 300;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_game_field.html#af0f9fb3b80f27327bb3681c44d09a312">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#af0f9fb3b80f27327bb3681c44d09a312">rowCellsNumber</a> = 9;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_game_field.html#a4808d5db29ccef0de9ca7718bf00cc6f">   28</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a4808d5db29ccef0de9ca7718bf00cc6f">colCellsNumber</a>  = 9;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_game_field.html#a9cee326dafabcf9efdbff08f63b0559a">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a9cee326dafabcf9efdbff08f63b0559a">cellSize</a> = <a class="code hl_variable" href="class_game_field.html#a5f1d70878b9622a29bc35644667a1f16">width</a> / std::min(<a class="code hl_variable" href="class_game_field.html#af0f9fb3b80f27327bb3681c44d09a312">rowCellsNumber</a>, <a class="code hl_variable" href="class_game_field.html#a4808d5db29ccef0de9ca7718bf00cc6f">colCellsNumber</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_game_field.html#a80b30bf62054b08856979450709bfdc6">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a80b30bf62054b08856979450709bfdc6">bombsNumber</a> = 15;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_game_field.html#a72d93438e96eb2717be6c670828922ee">   31</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a72d93438e96eb2717be6c670828922ee">flagsLeftNumber</a> = <a class="code hl_variable" href="class_game_field.html#a80b30bf62054b08856979450709bfdc6">bombsNumber</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_game_field.html#a7708192b00fdc95d1f14fe262c66a1dc">   33</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#a7708192b00fdc95d1f14fe262c66a1dc">gameId</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_game_field.html#a1582111cdd762b7eb25397cce022f3c1">   34</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_game_field.html#a1582111cdd762b7eb25397cce022f3c1">isRepeat</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_game_field.html#ac58f7487d50daecedd309d867ab4da9d">   35</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_field.html#ac58f7487d50daecedd309d867ab4da9d">stepNumber</a> = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_game_field.html#a1dcecf18f875fb156b5f1c776342a90a">   37</a></span>    <a class="code hl_class" href="class_game_over.html">GameOver</a>* <a class="code hl_variable" href="class_game_field.html#a1dcecf18f875fb156b5f1c776342a90a">gameOverModal</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#abbf7b9697c64af3c72b87a7289307a6d">initGame</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#a8e88908458127a959ed7ecbe5e1fe0e5">initDB</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#ab8b45c310dab8a642c1ee129805b7df1">setupParams</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#a65c64f748d24341ce5fe9fb0e549121b">generateField</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::vector&lt;FieldCell *&gt; <a class="code hl_function" href="class_game_field.html#a03ecbd792ad0a7a3648ae3603a316541">getNeighbors</a>(<span class="keywordtype">int</span> rowId, <span class="keywordtype">int</span> colId);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#a1a3484a776390c5f4cac3603deeffaa5">calculateCellNumbers</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#acbdee82d392aa7be509092745c36635d">openArea</a>(<span class="keywordtype">int</span> rowId, <span class="keywordtype">int</span> colId);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#abbeb03f448c384150dc9c7cbdade88c8">openAll</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_field.html#ac610b1b5c6436ad6da710c19f5b0032c">checkWin</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#abd745a49b73460200089fee45458f3ad">win</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#ab065caa9fa19b5c275c3bae32be8727f">gameOver</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#a4c97211f6b659e59c0a8b606575a4e7d">storeStep</a>(<span class="keywordtype">int</span> rowId, <span class="keywordtype">int</span> colId, <span class="keywordtype">bool</span> opened);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_field.html#a67dbd3b832be6ee886fde96f237d3b91">storeBomb</a>(<span class="keywordtype">int</span> rowId, <span class="keywordtype">int</span> colId);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_field.html#af8e652e302430ec80aae4919d98bbfd4">processLeftCellClick</a>(<span class="keywordtype">int</span> rowId, <span class="keywordtype">int</span> colId);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_field.html#a2feed9298963bed8b268b5d12cc7936c">processRightCellClick</a>(<span class="keywordtype">int</span> rowId, <span class="keywordtype">int</span> colId);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_field.html#ae36f658ba3da3654d2f11c5aa4f36c27">processComboBoxChange</a>(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_field.html#aeb6a037c23863e3f0aea4f6b9d8e3d41">restart</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_field.html#a529824ba74d85d24111298e47744fefc">showRepeat</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif </span><span class="comment">//SAPER_GAME_FIELD_H</span></div>
+<div class="ttc" id="aclass_game_field_html"><div class="ttname"><a href="class_game_field.html">GameField</a></div><div class="ttdoc">Класс игрового окна</div><div class="ttdef"><b>Definition:</b> game_field.h:13</div></div>
+<div class="ttc" id="aclass_game_field_html_a03ecbd792ad0a7a3648ae3603a316541"><div class="ttname"><a href="class_game_field.html#a03ecbd792ad0a7a3648ae3603a316541">GameField::getNeighbors</a></div><div class="ttdeci">std::vector&lt; FieldCell * &gt; getNeighbors(int rowId, int colId)</div><div class="ttdoc">Возвращает список соседей клетки</div><div class="ttdef"><b>Definition:</b> game_field.cpp:123</div></div>
+<div class="ttc" id="aclass_game_field_html_a11f7f876a7d14e365d63239095e68be1"><div class="ttname"><a href="class_game_field.html#a11f7f876a7d14e365d63239095e68be1">GameField::scene</a></div><div class="ttdeci">QGraphicsScene * scene</div><div class="ttdef"><b>Definition:</b> game_field.h:19</div></div>
+<div class="ttc" id="aclass_game_field_html_a1582111cdd762b7eb25397cce022f3c1"><div class="ttname"><a href="class_game_field.html#a1582111cdd762b7eb25397cce022f3c1">GameField::isRepeat</a></div><div class="ttdeci">bool isRepeat</div><div class="ttdef"><b>Definition:</b> game_field.h:34</div></div>
+<div class="ttc" id="aclass_game_field_html_a1a3484a776390c5f4cac3603deeffaa5"><div class="ttname"><a href="class_game_field.html#a1a3484a776390c5f4cac3603deeffaa5">GameField::calculateCellNumbers</a></div><div class="ttdeci">void calculateCellNumbers()</div><div class="ttdoc">Рассчитывает количество бомб рядом с каждой клеткой на поле</div><div class="ttdef"><b>Definition:</b> game_field.cpp:110</div></div>
+<div class="ttc" id="aclass_game_field_html_a1dcecf18f875fb156b5f1c776342a90a"><div class="ttname"><a href="class_game_field.html#a1dcecf18f875fb156b5f1c776342a90a">GameField::gameOverModal</a></div><div class="ttdeci">GameOver * gameOverModal</div><div class="ttdef"><b>Definition:</b> game_field.h:37</div></div>
+<div class="ttc" id="aclass_game_field_html_a233385a46f515f7596a7067df4ff5381"><div class="ttname"><a href="class_game_field.html#a233385a46f515f7596a7067df4ff5381">GameField::difficulties</a></div><div class="ttdeci">std::map&lt; std::string, std::map&lt; std::string, int &gt; &gt; difficulties</div><div class="ttdef"><b>Definition:</b> game_field.h:22</div></div>
+<div class="ttc" id="aclass_game_field_html_a2feed9298963bed8b268b5d12cc7936c"><div class="ttname"><a href="class_game_field.html#a2feed9298963bed8b268b5d12cc7936c">GameField::processRightCellClick</a></div><div class="ttdeci">void processRightCellClick(int rowId, int colId)</div><div class="ttdoc">Отрабатывает нажатие правой кнопкой мыши на ячейку</div><div class="ttdef"><b>Definition:</b> game_field.cpp:235</div></div>
+<div class="ttc" id="aclass_game_field_html_a4808d5db29ccef0de9ca7718bf00cc6f"><div class="ttname"><a href="class_game_field.html#a4808d5db29ccef0de9ca7718bf00cc6f">GameField::colCellsNumber</a></div><div class="ttdeci">int colCellsNumber</div><div class="ttdef"><b>Definition:</b> game_field.h:28</div></div>
+<div class="ttc" id="aclass_game_field_html_a4c97211f6b659e59c0a8b606575a4e7d"><div class="ttname"><a href="class_game_field.html#a4c97211f6b659e59c0a8b606575a4e7d">GameField::storeStep</a></div><div class="ttdeci">void storeStep(int rowId, int colId, bool opened)</div><div class="ttdoc">Записывает в БД ход игрока</div><div class="ttdef"><b>Definition:</b> game_field.cpp:201</div></div>
+<div class="ttc" id="aclass_game_field_html_a529824ba74d85d24111298e47744fefc"><div class="ttname"><a href="class_game_field.html#a529824ba74d85d24111298e47744fefc">GameField::showRepeat</a></div><div class="ttdeci">void showRepeat()</div><div class="ttdoc">Показывает повтор предыдущей игры</div><div class="ttdef"><b>Definition:</b> game_field.cpp:296</div></div>
+<div class="ttc" id="aclass_game_field_html_a5f1d70878b9622a29bc35644667a1f16"><div class="ttname"><a href="class_game_field.html#a5f1d70878b9622a29bc35644667a1f16">GameField::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> game_field.h:25</div></div>
+<div class="ttc" id="aclass_game_field_html_a65c64f748d24341ce5fe9fb0e549121b"><div class="ttname"><a href="class_game_field.html#a65c64f748d24341ce5fe9fb0e549121b">GameField::generateField</a></div><div class="ttdeci">void generateField()</div><div class="ttdoc">Рандомно генерирует поле в зависимости от параметров</div><div class="ttdef"><b>Definition:</b> game_field.cpp:57</div></div>
+<div class="ttc" id="aclass_game_field_html_a67dbd3b832be6ee886fde96f237d3b91"><div class="ttname"><a href="class_game_field.html#a67dbd3b832be6ee886fde96f237d3b91">GameField::storeBomb</a></div><div class="ttdeci">void storeBomb(int rowId, int colId)</div><div class="ttdoc">Записывает в БД местоположение бомбы</div><div class="ttdef"><b>Definition:</b> game_field.cpp:215</div></div>
+<div class="ttc" id="aclass_game_field_html_a70192ecc44bb397865f239233b75ddb4"><div class="ttname"><a href="class_game_field.html#a70192ecc44bb397865f239233b75ddb4">GameField::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> game_field.h:26</div></div>
+<div class="ttc" id="aclass_game_field_html_a7070fd755281aa880b210ec5f1c94f1a"><div class="ttname"><a href="class_game_field.html#a7070fd755281aa880b210ec5f1c94f1a">GameField::ui</a></div><div class="ttdeci">Ui_GameField ui</div><div class="ttdef"><b>Definition:</b> game_field.h:18</div></div>
+<div class="ttc" id="aclass_game_field_html_a72d93438e96eb2717be6c670828922ee"><div class="ttname"><a href="class_game_field.html#a72d93438e96eb2717be6c670828922ee">GameField::flagsLeftNumber</a></div><div class="ttdeci">int flagsLeftNumber</div><div class="ttdef"><b>Definition:</b> game_field.h:31</div></div>
+<div class="ttc" id="aclass_game_field_html_a7708192b00fdc95d1f14fe262c66a1dc"><div class="ttname"><a href="class_game_field.html#a7708192b00fdc95d1f14fe262c66a1dc">GameField::gameId</a></div><div class="ttdeci">int gameId</div><div class="ttdef"><b>Definition:</b> game_field.h:33</div></div>
+<div class="ttc" id="aclass_game_field_html_a80b30bf62054b08856979450709bfdc6"><div class="ttname"><a href="class_game_field.html#a80b30bf62054b08856979450709bfdc6">GameField::bombsNumber</a></div><div class="ttdeci">int bombsNumber</div><div class="ttdef"><b>Definition:</b> game_field.h:30</div></div>
+<div class="ttc" id="aclass_game_field_html_a8e51ad934e0df26c181022d2bccb07c3"><div class="ttname"><a href="class_game_field.html#a8e51ad934e0df26c181022d2bccb07c3">GameField::currentDifficulty</a></div><div class="ttdeci">std::map&lt; std::string, int &gt; currentDifficulty</div><div class="ttdef"><b>Definition:</b> game_field.h:23</div></div>
+<div class="ttc" id="aclass_game_field_html_a8e88908458127a959ed7ecbe5e1fe0e5"><div class="ttname"><a href="class_game_field.html#a8e88908458127a959ed7ecbe5e1fe0e5">GameField::initDB</a></div><div class="ttdeci">void initDB()</div><div class="ttdoc">Подключается к базе данных</div><div class="ttdef"><b>Definition:</b> game_field.cpp:33</div></div>
+<div class="ttc" id="aclass_game_field_html_a9cee326dafabcf9efdbff08f63b0559a"><div class="ttname"><a href="class_game_field.html#a9cee326dafabcf9efdbff08f63b0559a">GameField::cellSize</a></div><div class="ttdeci">int cellSize</div><div class="ttdef"><b>Definition:</b> game_field.h:29</div></div>
+<div class="ttc" id="aclass_game_field_html_aad19c17b437259c1fc845ddfb2e99955"><div class="ttname"><a href="class_game_field.html#aad19c17b437259c1fc845ddfb2e99955">GameField::fieldCells</a></div><div class="ttdeci">QVector&lt; QVector&lt; FieldCell * &gt; &gt; fieldCells</div><div class="ttdef"><b>Definition:</b> game_field.h:20</div></div>
+<div class="ttc" id="aclass_game_field_html_ab065caa9fa19b5c275c3bae32be8727f"><div class="ttname"><a href="class_game_field.html#ab065caa9fa19b5c275c3bae32be8727f">GameField::gameOver</a></div><div class="ttdeci">void gameOver()</div><div class="ttdoc">Вызывает модальное окно проигрыша</div><div class="ttdef"><b>Definition:</b> game_field.cpp:307</div></div>
+<div class="ttc" id="aclass_game_field_html_ab8b45c310dab8a642c1ee129805b7df1"><div class="ttname"><a href="class_game_field.html#ab8b45c310dab8a642c1ee129805b7df1">GameField::setupParams</a></div><div class="ttdeci">void setupParams()</div><div class="ttdoc">Заполняет параметры игры и игрового поля в зависимости от выбранной сложности</div><div class="ttdef"><b>Definition:</b> game_field.cpp:39</div></div>
+<div class="ttc" id="aclass_game_field_html_abbeb03f448c384150dc9c7cbdade88c8"><div class="ttname"><a href="class_game_field.html#abbeb03f448c384150dc9c7cbdade88c8">GameField::openAll</a></div><div class="ttdeci">void openAll()</div><div class="ttdoc">Открывает все бомбы на поле</div><div class="ttdef"><b>Definition:</b> game_field.cpp:224</div></div>
+<div class="ttc" id="aclass_game_field_html_abbf7b9697c64af3c72b87a7289307a6d"><div class="ttname"><a href="class_game_field.html#abbf7b9697c64af3c72b87a7289307a6d">GameField::initGame</a></div><div class="ttdeci">void initGame()</div><div class="ttdoc">Полностью перегенирирует игру</div><div class="ttdef"><b>Definition:</b> game_field.cpp:97</div></div>
+<div class="ttc" id="aclass_game_field_html_abd745a49b73460200089fee45458f3ad"><div class="ttname"><a href="class_game_field.html#abd745a49b73460200089fee45458f3ad">GameField::win</a></div><div class="ttdeci">void win()</div><div class="ttdoc">Вызывает модальное окно победы</div><div class="ttdef"><b>Definition:</b> game_field.cpp:302</div></div>
+<div class="ttc" id="aclass_game_field_html_ac58f7487d50daecedd309d867ab4da9d"><div class="ttname"><a href="class_game_field.html#ac58f7487d50daecedd309d867ab4da9d">GameField::stepNumber</a></div><div class="ttdeci">int stepNumber</div><div class="ttdef"><b>Definition:</b> game_field.h:35</div></div>
+<div class="ttc" id="aclass_game_field_html_ac610b1b5c6436ad6da710c19f5b0032c"><div class="ttname"><a href="class_game_field.html#ac610b1b5c6436ad6da710c19f5b0032c">GameField::checkWin</a></div><div class="ttdeci">bool checkWin()</div><div class="ttdoc">Проверяет, выйграта ли игра</div><div class="ttdef"><b>Definition:</b> game_field.cpp:272</div></div>
+<div class="ttc" id="aclass_game_field_html_acbdee82d392aa7be509092745c36635d"><div class="ttname"><a href="class_game_field.html#acbdee82d392aa7be509092745c36635d">GameField::openArea</a></div><div class="ttdeci">void openArea(int rowId, int colId)</div><div class="ttdoc">Рекурсивно открывает клетки, которые не являются бомбами, вокруг изначальной</div><div class="ttdef"><b>Definition:</b> game_field.cpp:253</div></div>
+<div class="ttc" id="aclass_game_field_html_ae36f658ba3da3654d2f11c5aa4f36c27"><div class="ttname"><a href="class_game_field.html#ae36f658ba3da3654d2f11c5aa4f36c27">GameField::processComboBoxChange</a></div><div class="ttdeci">void processComboBoxChange(const QString &amp;)</div><div class="ttdoc">Отрабатывает изменение сложности</div><div class="ttdef"><b>Definition:</b> game_field.cpp:284</div></div>
+<div class="ttc" id="aclass_game_field_html_aeb6a037c23863e3f0aea4f6b9d8e3d41"><div class="ttname"><a href="class_game_field.html#aeb6a037c23863e3f0aea4f6b9d8e3d41">GameField::restart</a></div><div class="ttdeci">void restart()</div><div class="ttdoc">Начинает игру заново</div><div class="ttdef"><b>Definition:</b> game_field.cpp:290</div></div>
+<div class="ttc" id="aclass_game_field_html_af0f9fb3b80f27327bb3681c44d09a312"><div class="ttname"><a href="class_game_field.html#af0f9fb3b80f27327bb3681c44d09a312">GameField::rowCellsNumber</a></div><div class="ttdeci">int rowCellsNumber</div><div class="ttdef"><b>Definition:</b> game_field.h:27</div></div>
+<div class="ttc" id="aclass_game_field_html_af8e652e302430ec80aae4919d98bbfd4"><div class="ttname"><a href="class_game_field.html#af8e652e302430ec80aae4919d98bbfd4">GameField::processLeftCellClick</a></div><div class="ttdeci">void processLeftCellClick(int rowId, int colId)</div><div class="ttdoc">Отрабатывает нажатие левой кнопкой мыши на ячейку</div><div class="ttdef"><b>Definition:</b> game_field.cpp:148</div></div>
+<div class="ttc" id="aclass_game_over_html"><div class="ttname"><a href="class_game_over.html">GameOver</a></div><div class="ttdoc">Класс модального окна с сообщением о результате игры</div><div class="ttdef"><b>Definition:</b> game_over.h:8</div></div>
+<div class="ttc" id="afield__cell_8h_html"><div class="ttname"><a href="field__cell_8h.html">field_cell.h</a></div></div>
+<div class="ttc" id="agame__over_8h_html"><div class="ttname"><a href="game__over_8h.html">game_over.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="game__field_8h.html">game_field.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>
