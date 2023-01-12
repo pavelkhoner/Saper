@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>585</width>
-    <height>150</height>
+    <width>719</width>
+    <height>200</height>
    </rect>
   </property>
   <property name="font">
@@ -72,7 +72,14 @@
        <item>
         <widget class="QPushButton" name="pushButton">
          <property name="text">
-          <string>Включить запись</string>
+          <string>Сохранить повтор</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Загрузить</string>
          </property>
         </widget>
        </item>

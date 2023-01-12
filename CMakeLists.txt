@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets Core Gui Sql Svg REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Core Gui Sql Svg REQUIRED)
 
-add_executable(saper src/main.cpp src/game_field.cpp src/game_field.h src/game_objects/field_cell.cpp src/game_objects/field_cell.h src/game_over.cpp src/game_over.h)
+add_executable(saper src/main.cpp src/game_field.cpp src/game_field.h src/game_objects/field_cell.cpp src/game_objects/field_cell.h src/game_over.cpp src/game_over.h src/download_modal.cpp src/download_modal.h src/save_modal.cpp src/save_modal.h)
 target_link_libraries(saper Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Gui Qt${QT_VERSION_MAJOR}::Sql Qt${QT_VERSION_MAJOR}::Svg)
 
 install(TARGETS saper DESTINATION bin)

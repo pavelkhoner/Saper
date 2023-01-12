@@ -7,5 +7,6 @@ var searchData=
   ['isflagged_4',['isFlagged',['../class_field_cell.html#a13f04ae0bde8006c914fc89132933528',1,'FieldCell']]],
   ['isopened_5',['isOpened',['../class_field_cell.html#a45f2406f3b7646c0264e805686144f34',1,'FieldCell']]],
   ['isopenednumber_6',['isOpenedNumber',['../class_field_cell.html#a067f8e859d73bfd5971c319a24dd93b8',1,'FieldCell']]],
-  ['isrepeat_7',['isRepeat',['../class_game_field.html#a1582111cdd762b7eb25397cce022f3c1',1,'GameField']]]
+  ['isrepeat_7',['isRepeat',['../class_game_field.html#a1582111cdd762b7eb25397cce022f3c1',1,'GameField']]],
+  ['issave_8',['isSave',['../class_game_field.html#ac2d3d80c70d25b4487f0ae880247f745',1,'GameField']]]
 ];

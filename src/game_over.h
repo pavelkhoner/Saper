@@ -17,14 +17,17 @@ private:
 private slots:
     /// Отправляет сигнал о начале новой игры
     void sendRestart();
-    /// Отправляет сигнал о показе повтора игры
-    void sendShowRepeat();
-
+    /// Отправляет сигнал об открытии окна сохранения
+    void sendSave();
+    /// Отправляет сигнал об открытии окна загрузки
+    void sendDownload();
 signals:
     /// Сигнал о начале новой игры
     void restart();
-    /// Сигнал о показе повтора игры
-    void showRepeat();
+    /// Сигнал об открытии окна сохранения
+    void save();
+    /// Сигнал об открытии окна загрузки
+    void download();
 };
 
 #endif //SAPER_GAME_OVER_H

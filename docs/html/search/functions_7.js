@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['open_0',['open',['../class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8',1,'FieldCell']]],
-  ['openall_1',['openAll',['../class_game_field.html#abbeb03f448c384150dc9c7cbdade88c8',1,'GameField']]],
-  ['openarea_2',['openArea',['../class_game_field.html#acbdee82d392aa7be509092745c36635d',1,'GameField']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['makesavedmove_1',['makeSavedMove',['../class_game_field.html#ae65aa64b56df840501cb619d02dccf11',1,'GameField']]],
+  ['mousepressevent_2',['mousePressEvent',['../class_field_cell.html#a60a76b0f5ad57ebf70abae3011f468bc',1,'FieldCell']]]
 ];

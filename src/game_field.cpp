@@ -22,12 +22,18 @@ GameField::GameField(QWidget *parent) : QMainWindow(parent) {
 	initGame();
 
     gameOverModal = new GameOver();
-
+    saveModal = new SaveModal();
+    downloadModal = new DownloadModal();
     connect(ui.pushButton, SIGNAL(clicked(bool)), this, SLOT(restart()));
+    connect(ui.pushButton_3, SIGNAL(clicked(bool)), this, SLOT(openDownloadModal()));
+    connect(ui.pushButton_2, SIGNAL(clicked(bool)), this, SLOT(showSaveModal()));
 	connect(ui.comboBox, SIGNAL(currentIndexChanged(const QString&)), this,
             SLOT(processComboBoxChange(const QString &)));
     connect(gameOverModal, SIGNAL(restart()), this, SLOT(restart()));
-    connect(gameOverModal, SIGNAL(showRepeat()), this, SLOT(showRepeat()));
+    connect(gameOverModal, SIGNAL(save()), this, SLOT(processSave()));
+    connect(gameOverModal, SIGNAL(download()), this, SLOT(processDownload()));
+    connect(saveModal, SIGNAL(sendSave(QString)), this, SLOT(saveGame(QString)));
+    connect(downloadModal, SIGNAL(sendDownload(QString)), this, SLOT(downloadGame(QString)));
 }
 
 void GameField::initDB() {
@@ -44,10 +50,20 @@ void GameField::setupParams() {
 	height = cellSize * rowCellsNumber + 50;
 	bombsNumber = currentDifficulty["bombsNumber"];
 	flagsLeftNumber = bombsNumber;
-    stepNumber = 0;
     ui.label->setText(QString::number(flagsLeftNumber));
     this->resize(width + 200, height + 200);
     ui.graphicsView->setMinimumSize(width, height);
+    if (isSave) {
+        QSqlQuery query;
+        query.prepare(R"(SELECT MAX(number) from Moves WHERE game_id=?)");
+        query.addBindValue(gameId);
+        query.exec();
+        query.first();
+
+        stepNumber = query.value(0).toInt()+1;
+    } else {
+        stepNumber = 0;
+    }
 }
 
 int getRandomInt(int limit) {
@@ -70,7 +86,7 @@ void GameField::generateField() {
 		}
 	}
 
-    if (isRepeat) {
+    if (isRepeat || isSave) {
         QSqlQuery query;
         query.prepare(R"(SELECT row_id, col_id from Bombs WHERE game_id=?)");
         query.addBindValue(gameId);
@@ -91,11 +107,28 @@ void GameField::generateField() {
             }
         }
     }
+
 	calculateCellNumbers();
+
+    if (isSave) {
+        QSqlQuery query;
+        query.prepare(R"(
+        SELECT row_id, col_id, opened, flagged FROM Moves
+        INNER JOIN Saves on Moves.id = Saves.move_id
+        WHERE name=?
+        ORDER BY number)");
+        query.addBindValue(saveName);
+        query.exec();
+
+        while(query.next()) {
+            qDebug()<< "qe";
+            makeSavedMove(query);
+        }
+    }
 }
 
 void GameField::initGame() {
-    if (!isRepeat) {
+    if (!(isRepeat || isSave)) {
         QSqlQuery query;
         query.prepare(R"(INSERT INTO Games(difficulty) VALUES(:difficulty))");
         query.bindValue(":difficulty", ui.comboBox->currentText());
@@ -153,30 +186,9 @@ void GameField::processLeftCellClick(int rowId, int colId) {
         query.bindValue(":number", stepNumber);
         query.exec();
         query.first();
-        int stepRowId = query.value(0).toInt();
-        int stepColId = query.value(1).toInt();
-        if (query.value(2).toBool()) {
-            // opened
-            if (fieldCells[stepRowId][stepColId]->getIsBomb()) {
-                fieldCells[stepRowId][stepColId]->explode();
-                openAll();
-                gameOver();
-            } else {
-                openArea(stepRowId, stepColId);
-                if (checkWin()) {
-                    win();
-                }
-            }
-        } else {
-            // flagged
-            fieldCells[stepRowId][stepColId]->setFlag();
-            if (fieldCells[stepRowId][stepColId]->getIsFlagged()) {
-                flagsLeftNumber--;
-            } else {
-                flagsLeftNumber++;
-            }
-            ui.label->setText(QString::number(flagsLeftNumber));
-        }
+
+        makeSavedMove(query);
+
         stepNumber++;
     } else {
         if (fieldCells[rowId][colId]->getIsFlagged() || fieldCells[rowId][colId]->getIsOpened()) {
@@ -195,6 +207,35 @@ void GameField::processLeftCellClick(int rowId, int colId) {
                 win();
             }
         }
+    }
+}
+
+void GameField::makeSavedMove(QSqlQuery query) {
+    int stepRowId = query.value(0).toInt();
+    int stepColId = query.value(1).toInt();
+    qDebug() << stepRowId;
+    if (query.value(2).toBool()) {
+        // opened
+        if (fieldCells[stepRowId][stepColId]->getIsBomb()) {
+            fieldCells[stepRowId][stepColId]->explode();
+            openAll();
+            gameOver();
+        } else {
+            qDebug() << "open";
+            openArea(stepRowId, stepColId);
+            if (checkWin()) {
+                win();
+            }
+        }
+    } else {
+        // flagged
+        fieldCells[stepRowId][stepColId]->setFlag();
+        if (fieldCells[stepRowId][stepColId]->getIsFlagged()) {
+            flagsLeftNumber--;
+        } else {
+            flagsLeftNumber++;
+        }
+        ui.label->setText(QString::number(flagsLeftNumber));
     }
 }
 
@@ -283,28 +324,93 @@ bool GameField::checkWin() {
 
 void GameField::processComboBoxChange(const QString &) {
     isRepeat = false;
+    isSave = false;
     currentDifficulty = difficulties[ui.comboBox->currentText().toStdString()];
     initGame();
 }
 
 void GameField::restart() {
     isRepeat = false;
+    isSave = false;
     initGame();
     gameOverModal->hide();
 }
 
 void GameField::showRepeat() {
     isRepeat = true;
+    isSave = false;
     initGame();
     gameOverModal->hide();
 }
 
+void GameField::showSaveModal() {
+    saveModal->show();
+}
+
+void GameField::saveGame(QString gameName) {
+    QSqlQuery query;
+    query.prepare(R"(
+    INSERT INTO Saves(move_id, name)
+    SELECT id, :name from Moves where game_id=:gameId
+    )");
+    query.bindValue(":gameId", gameId);
+    query.bindValue(":name", gameName);
+    query.exec();
+    saveModal->hide();
+}
+
+void GameField::openDownloadModal() {
+    downloadModal->show();
+}
+
+void GameField::downloadGame(QString saveName) {
+    this->saveName = saveName;
+    qDebug() << saveName;
+    QSqlQuery query;
+    query.prepare(R"(
+    SELECT game_id, finished FROM Moves
+    INNER JOIN Saves ON Moves.id=Saves.move_id
+    INNER JOIN Games ON Moves.game_id=Games.id
+    where name=?
+    )");
+    query.addBindValue(saveName);
+    query.exec();
+    query.first();
+    gameId = query.value(0).toInt();
+    bool finished = query.value(1).toBool();
+    isRepeat = finished;
+    isSave = !finished;
+    initGame();
+    downloadModal->hide();
+    gameOverModal->hide();
+}
+
 void GameField::win() {
+    finishGame();
     gameOverModal->setMessage("ВЫ ПОБЕДИЛИ!");
     gameOverModal->show();
 }
 
 void GameField::gameOver() {
+    finishGame();
     gameOverModal->setMessage("ВЫ ПРОИГРАЛИ(");
     gameOverModal->show();
+}
+
+void GameField::finishGame() {
+    QSqlQuery query;
+    query.prepare(R"(
+    UPDATE Games SET finished=1 WHERE id=:gameId
+    )");
+    query.bindValue(":gameId", gameId);
+    query.exec();
+}
+
+void GameField::processSave() {
+    saveModal->show();
+    saveModal->show();
+}
+
+void GameField::processDownload() {
+    downloadModal->show();
 }

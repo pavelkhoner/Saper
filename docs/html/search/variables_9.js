@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['scene_0',['scene',['../class_game_field.html#a11f7f876a7d14e365d63239095e68be1',1,'GameField']]],
-  ['size_1',['size',['../class_field_cell.html#a49b2e869d915cece144ef5b3d98a1b58',1,'FieldCell']]],
-  ['stepnumber_2',['stepNumber',['../class_game_field.html#ac58f7487d50daecedd309d867ab4da9d',1,'GameField']]]
+  ['rowcellsnumber_0',['rowCellsNumber',['../class_game_field.html#af0f9fb3b80f27327bb3681c44d09a312',1,'GameField']]],
+  ['rowid_1',['rowId',['../class_field_cell.html#acd26dd456427593bd52cb7abc6352075',1,'FieldCell']]]
 ];

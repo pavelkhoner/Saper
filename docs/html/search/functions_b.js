@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['win_0',['win',['../class_game_field.html#abd745a49b73460200089fee45458f3ad',1,'GameField']]]
+  ['save_0',['save',['../class_game_over.html#ae8a9d1f5182908bf5baa9c15afa10a5b',1,'GameOver::save()'],['../class_save_modal.html#ad1f59a76c24cc01eb3fb8564c7bb20b4',1,'SaveModal::save()']]],
+  ['savegame_1',['saveGame',['../class_game_field.html#ad97d1e69afc89e241c97087bd4237fb2',1,'GameField']]],
+  ['savemodal_2',['SaveModal',['../class_save_modal.html#abe2709a722ef6418a7462f28b9d5be22',1,'SaveModal']]],
+  ['senddownload_3',['sendDownload',['../class_download_modal.html#a81717ffa8e23b829067e51e3a4d16b30',1,'DownloadModal::sendDownload()'],['../class_game_over.html#a1e5b8bee25d436a13afbab64ca5ef5af',1,'GameOver::sendDownload()']]],
+  ['sendrestart_4',['sendRestart',['../class_game_over.html#ab68651dc5dc5a4bf882cfc1af118440c',1,'GameOver']]],
+  ['sendsave_5',['sendSave',['../class_game_over.html#abb6be40d175dec293be3ccec80afec65',1,'GameOver::sendSave()'],['../class_save_modal.html#ac5e6c04c2a47a9cd477c935afeb6c9d5',1,'SaveModal::sendSave()']]],
+  ['setbomb_6',['setBomb',['../class_field_cell.html#ae2cf3a4d88ce8444108d28da15b72c56',1,'FieldCell']]],
+  ['setcellnumber_7',['setCellNumber',['../class_field_cell.html#a1115ac67912a24b8e5aa2daccd61d096',1,'FieldCell']]],
+  ['setflag_8',['setFlag',['../class_field_cell.html#abd5c7a85a7012141a968027563429a1e',1,'FieldCell']]],
+  ['setmessage_9',['setMessage',['../class_game_over.html#ab1f82660b2e19dac734d895ceb46ffb9',1,'GameOver']]],
+  ['setsavings_10',['setSavings',['../class_download_modal.html#ae815fdeef9a32cf4bf74ea3f6ef743d8',1,'DownloadModal']]],
+  ['setupparams_11',['setupParams',['../class_game_field.html#ab8b45c310dab8a642c1ee129805b7df1',1,'GameField']]],
+  ['showevent_12',['showEvent',['../class_download_modal.html#ae9b23eb6c773942bde125c34b7069cb1',1,'DownloadModal']]],
+  ['showrepeat_13',['showRepeat',['../class_game_field.html#a529824ba74d85d24111298e47744fefc',1,'GameField']]],
+  ['showsavemodal_14',['showSaveModal',['../class_game_field.html#a4c86f50a8d840c7d3ff60938a79e3ae0',1,'GameField']]],
+  ['storebomb_15',['storeBomb',['../class_game_field.html#a67dbd3b832be6ee886fde96f237d3b91',1,'GameField']]],
+  ['storestep_16',['storeStep',['../class_game_field.html#a4c97211f6b659e59c0a8b606575a4e7d',1,'GameField']]]
 ];

@@ -5,6 +5,8 @@
 #include "../ui/ui_game_field.h"
 #include "game_objects/field_cell.h"
 #include "./game_over.h"
+#include "./save_modal.h"
+#include "./download_modal.h"
 #include <QString>
 #include <string>
 #include <QtSql>
@@ -32,10 +34,13 @@ private:
 
     int gameId;
     bool isRepeat = false;
+    QString saveName;
+    bool isSave = false;
     int stepNumber = 0;
 
     GameOver* gameOverModal;
-
+    SaveModal* saveModal;
+    DownloadModal* downloadModal;
     /// Полностью перегенирирует игру
     void initGame();
     /// Подключается к базе данных
@@ -62,6 +67,10 @@ private:
     void storeStep(int rowId, int colId, bool opened);
     /// Записывает в БД местоположение бомбы
     void storeBomb(int rowId, int colId);
+    /// Ставит флаг завершения игры в БД
+    void finishGame();
+    /// Делает сохраненный ход на основании записи из БД
+    void makeSavedMove(QSqlQuery query);
 public slots:
     /// Отрабатывает нажатие левой кнопкой мыши на ячейку
 	void processLeftCellClick(int rowId, int colId);
@@ -73,6 +82,18 @@ public slots:
     void restart();
     /// Показывает повтор предыдущей игры
     void showRepeat();
+    /// Открывает модальное окно для сохранения
+    void showSaveModal();
+    /// Сохраняет текущую игру
+    void saveGame(QString saveName);
+    /// Открывает модальное окно для загрузки
+    void openDownloadModal();
+    /// Загружает выбранную игры
+    void downloadGame(QString saveName);
+    /// Обрабатывает сигнал о сохранении после окончания игры
+    void processSave();
+    /// Обрабатывает сигнал о сохранении после окончания игры
+    void processDownload();
 };
 
 #endif //SAPER_GAME_FIELD_H

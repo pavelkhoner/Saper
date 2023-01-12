@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Saper<span id="projectnumber">&#160;01</span>
+   <div id="projectname">Saper<span id="projectnumber">&#160;0.1</span>
    </div>
-   <div id="projectbrief">Классический Сапер с функцией просмотра прошлой игры</div>
+   <div id="projectbrief">Saper game with savings</div>
   </td>
  </tr>
  </tbody>
@@ -111,6 +111,10 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>difficulties&#160;:&#160;<a class="el" href="class_game_field.html#a233385a46f515f7596a7067df4ff5381">GameField</a></li>
+<li>download()&#160;:&#160;<a class="el" href="class_download_modal.html#a3b7fccb29f4976e2da002d2575fa1483">DownloadModal</a>, <a class="el" href="class_game_over.html#a2c7477c85b444ce5e0fd058385581b43">GameOver</a></li>
+<li>downloadGame()&#160;:&#160;<a class="el" href="class_game_field.html#ac378f0cb50ff3008adba03a26e2f87ad">GameField</a></li>
+<li>DownloadModal()&#160;:&#160;<a class="el" href="class_download_modal.html#a5aee48296af7280c6bc5b571c7c9e1b6">DownloadModal</a></li>
+<li>downloadModal&#160;:&#160;<a class="el" href="class_game_field.html#a4ab62ade766bf34b19bf4532288ecb37">GameField</a></li>
 </ul>
 
 
@@ -122,6 +126,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
 <li>FieldCell()&#160;:&#160;<a class="el" href="class_field_cell.html#ab72c9f02259dfea9de7477b531250a3e">FieldCell</a></li>
 <li>fieldCells&#160;:&#160;<a class="el" href="class_game_field.html#aad19c17b437259c1fc845ddfb2e99955">GameField</a></li>
+<li>finishGame()&#160;:&#160;<a class="el" href="class_game_field.html#a06a62704abe1bb0414ca7e3a4c9faa3b">GameField</a></li>
 <li>flagsLeftNumber&#160;:&#160;<a class="el" href="class_game_field.html#a72d93438e96eb2717be6c670828922ee">GameField</a></li>
 </ul>
 
@@ -157,15 +162,18 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>isOpened&#160;:&#160;<a class="el" href="class_field_cell.html#a45f2406f3b7646c0264e805686144f34">FieldCell</a></li>
 <li>isOpenedNumber&#160;:&#160;<a class="el" href="class_field_cell.html#a067f8e859d73bfd5971c319a24dd93b8">FieldCell</a></li>
 <li>isRepeat&#160;:&#160;<a class="el" href="class_game_field.html#a1582111cdd762b7eb25397cce022f3c1">GameField</a></li>
+<li>isSave&#160;:&#160;<a class="el" href="class_game_field.html#ac2d3d80c70d25b4487f0ae880247f745">GameField</a></li>
 </ul>
 
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>leftCellClick()&#160;:&#160;<a class="el" href="class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd">FieldCell</a></li>
+<li>listModel&#160;:&#160;<a class="el" href="class_download_modal.html#adff8b8a92142212136d1c68d44e3a86e">DownloadModal</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>makeSavedMove()&#160;:&#160;<a class="el" href="class_game_field.html#ae65aa64b56df840501cb619d02dccf11">GameField</a></li>
 <li>message&#160;:&#160;<a class="el" href="class_game_over.html#a9b8a96b71024dedaf0af994e3747d4ec">GameOver</a></li>
 <li>mousePressEvent()&#160;:&#160;<a class="el" href="class_field_cell.html#a60a76b0f5ad57ebf70abae3011f468bc">FieldCell</a></li>
 </ul>
@@ -175,14 +183,17 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>open()&#160;:&#160;<a class="el" href="class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8">FieldCell</a></li>
 <li>openAll()&#160;:&#160;<a class="el" href="class_game_field.html#abbeb03f448c384150dc9c7cbdade88c8">GameField</a></li>
 <li>openArea()&#160;:&#160;<a class="el" href="class_game_field.html#acbdee82d392aa7be509092745c36635d">GameField</a></li>
+<li>openDownloadModal()&#160;:&#160;<a class="el" href="class_game_field.html#aaada2e6af0b95a77b741a4d5d5f61d41">GameField</a></li>
 </ul>
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>paint()&#160;:&#160;<a class="el" href="class_field_cell.html#af2f14b236cca357c11205fdce3c8a27f">FieldCell</a></li>
 <li>processComboBoxChange()&#160;:&#160;<a class="el" href="class_game_field.html#ae36f658ba3da3654d2f11c5aa4f36c27">GameField</a></li>
+<li>processDownload()&#160;:&#160;<a class="el" href="class_game_field.html#aa183123b38034d67c188f73b7ad1ebb2">GameField</a></li>
 <li>processLeftCellClick()&#160;:&#160;<a class="el" href="class_game_field.html#af8e652e302430ec80aae4919d98bbfd4">GameField</a></li>
 <li>processRightCellClick()&#160;:&#160;<a class="el" href="class_game_field.html#a2feed9298963bed8b268b5d12cc7936c">GameField</a></li>
+<li>processSave()&#160;:&#160;<a class="el" href="class_game_field.html#a59c5cc88b44f50cab633b30a5f8c86d5">GameField</a></li>
 </ul>
 
 
@@ -195,15 +206,24 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>save()&#160;:&#160;<a class="el" href="class_game_over.html#ae8a9d1f5182908bf5baa9c15afa10a5b">GameOver</a>, <a class="el" href="class_save_modal.html#ad1f59a76c24cc01eb3fb8564c7bb20b4">SaveModal</a></li>
+<li>saveGame()&#160;:&#160;<a class="el" href="class_game_field.html#ad97d1e69afc89e241c97087bd4237fb2">GameField</a></li>
+<li>saveModal&#160;:&#160;<a class="el" href="class_game_field.html#aa0736438e97ff2c35f49e6c6d440b8da">GameField</a></li>
+<li>SaveModal()&#160;:&#160;<a class="el" href="class_save_modal.html#abe2709a722ef6418a7462f28b9d5be22">SaveModal</a></li>
+<li>saveName&#160;:&#160;<a class="el" href="class_game_field.html#a2f569efb469d43491d40a19506cddfc7">GameField</a></li>
 <li>scene&#160;:&#160;<a class="el" href="class_game_field.html#a11f7f876a7d14e365d63239095e68be1">GameField</a></li>
+<li>sendDownload()&#160;:&#160;<a class="el" href="class_download_modal.html#a81717ffa8e23b829067e51e3a4d16b30">DownloadModal</a>, <a class="el" href="class_game_over.html#a1e5b8bee25d436a13afbab64ca5ef5af">GameOver</a></li>
 <li>sendRestart()&#160;:&#160;<a class="el" href="class_game_over.html#ab68651dc5dc5a4bf882cfc1af118440c">GameOver</a></li>
-<li>sendShowRepeat()&#160;:&#160;<a class="el" href="class_game_over.html#aabacfbeb15a7700b409b1049655fde38">GameOver</a></li>
+<li>sendSave()&#160;:&#160;<a class="el" href="class_game_over.html#abb6be40d175dec293be3ccec80afec65">GameOver</a>, <a class="el" href="class_save_modal.html#ac5e6c04c2a47a9cd477c935afeb6c9d5">SaveModal</a></li>
 <li>setBomb()&#160;:&#160;<a class="el" href="class_field_cell.html#ae2cf3a4d88ce8444108d28da15b72c56">FieldCell</a></li>
 <li>setCellNumber()&#160;:&#160;<a class="el" href="class_field_cell.html#a1115ac67912a24b8e5aa2daccd61d096">FieldCell</a></li>
 <li>setFlag()&#160;:&#160;<a class="el" href="class_field_cell.html#abd5c7a85a7012141a968027563429a1e">FieldCell</a></li>
 <li>setMessage()&#160;:&#160;<a class="el" href="class_game_over.html#ab1f82660b2e19dac734d895ceb46ffb9">GameOver</a></li>
+<li>setSavings()&#160;:&#160;<a class="el" href="class_download_modal.html#ae815fdeef9a32cf4bf74ea3f6ef743d8">DownloadModal</a></li>
 <li>setupParams()&#160;:&#160;<a class="el" href="class_game_field.html#ab8b45c310dab8a642c1ee129805b7df1">GameField</a></li>
-<li>showRepeat()&#160;:&#160;<a class="el" href="class_game_field.html#a529824ba74d85d24111298e47744fefc">GameField</a>, <a class="el" href="class_game_over.html#a339c15d13431a69c295c0d58f0b8e8db">GameOver</a></li>
+<li>showEvent()&#160;:&#160;<a class="el" href="class_download_modal.html#ae9b23eb6c773942bde125c34b7069cb1">DownloadModal</a></li>
+<li>showRepeat()&#160;:&#160;<a class="el" href="class_game_field.html#a529824ba74d85d24111298e47744fefc">GameField</a></li>
+<li>showSaveModal()&#160;:&#160;<a class="el" href="class_game_field.html#a4c86f50a8d840c7d3ff60938a79e3ae0">GameField</a></li>
 <li>size&#160;:&#160;<a class="el" href="class_field_cell.html#a49b2e869d915cece144ef5b3d98a1b58">FieldCell</a></li>
 <li>stepNumber&#160;:&#160;<a class="el" href="class_game_field.html#ac58f7487d50daecedd309d867ab4da9d">GameField</a></li>
 <li>storeBomb()&#160;:&#160;<a class="el" href="class_game_field.html#a67dbd3b832be6ee886fde96f237d3b91">GameField</a></li>
@@ -212,7 +232,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>ui&#160;:&#160;<a class="el" href="class_game_field.html#a7070fd755281aa880b210ec5f1c94f1a">GameField</a>, <a class="el" href="class_game_over.html#a5e9fc509b123d2891f030c191ebd5ba3">GameOver</a></li>
+<li>ui&#160;:&#160;<a class="el" href="class_download_modal.html#a43453b1bff68356d730932d3218ce439">DownloadModal</a>, <a class="el" href="class_game_field.html#a7070fd755281aa880b210ec5f1c94f1a">GameField</a>, <a class="el" href="class_game_over.html#a5e9fc509b123d2891f030c191ebd5ba3">GameOver</a>, <a class="el" href="class_save_modal.html#a4a8eddbca22e76b558b4abd5ab18e4e7">SaveModal</a></li>
 </ul>
 
 

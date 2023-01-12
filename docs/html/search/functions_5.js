@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['leftcellclick_0',['leftCellClick',['../class_field_cell.html#aee1535b98821d6b8c53f76b90e57f7cd',1,'FieldCell']]]
+  ['initdb_0',['initDB',['../class_game_field.html#a8e88908458127a959ed7ecbe5e1fe0e5',1,'GameField']]],
+  ['initgame_1',['initGame',['../class_game_field.html#abbf7b9697c64af3c72b87a7289307a6d',1,'GameField']]]
 ];

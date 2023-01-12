@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Saper<span id="projectnumber">&#160;01</span>
+   <div id="projectname">Saper<span id="projectnumber">&#160;0.1</span>
    </div>
-   <div id="projectbrief">Классический Сапер с функцией просмотра прошлой игры</div>
+   <div id="projectbrief">Saper game with savings</div>
   </td>
  </tr>
  </tbody>
@@ -128,6 +128,24 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 <tr class="memitem:a529824ba74d85d24111298e47744fefc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a529824ba74d85d24111298e47744fefc">showRepeat</a> ()</td></tr>
 <tr class="memdesc:a529824ba74d85d24111298e47744fefc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показывает повтор предыдущей игры  <a href="class_game_field.html#a529824ba74d85d24111298e47744fefc">Подробнее...</a><br /></td></tr>
 <tr class="separator:a529824ba74d85d24111298e47744fefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c86f50a8d840c7d3ff60938a79e3ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a4c86f50a8d840c7d3ff60938a79e3ae0">showSaveModal</a> ()</td></tr>
+<tr class="memdesc:a4c86f50a8d840c7d3ff60938a79e3ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает модальное окно для сохранения  <a href="class_game_field.html#a4c86f50a8d840c7d3ff60938a79e3ae0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4c86f50a8d840c7d3ff60938a79e3ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97d1e69afc89e241c97087bd4237fb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#ad97d1e69afc89e241c97087bd4237fb2">saveGame</a> (QString <a class="el" href="class_game_field.html#a2f569efb469d43491d40a19506cddfc7">saveName</a>)</td></tr>
+<tr class="memdesc:ad97d1e69afc89e241c97087bd4237fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохраняет текущую игру  <a href="class_game_field.html#ad97d1e69afc89e241c97087bd4237fb2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad97d1e69afc89e241c97087bd4237fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaada2e6af0b95a77b741a4d5d5f61d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#aaada2e6af0b95a77b741a4d5d5f61d41">openDownloadModal</a> ()</td></tr>
+<tr class="memdesc:aaada2e6af0b95a77b741a4d5d5f61d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает модальное окно для загрузки  <a href="class_game_field.html#aaada2e6af0b95a77b741a4d5d5f61d41">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaada2e6af0b95a77b741a4d5d5f61d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac378f0cb50ff3008adba03a26e2f87ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#ac378f0cb50ff3008adba03a26e2f87ad">downloadGame</a> (QString <a class="el" href="class_game_field.html#a2f569efb469d43491d40a19506cddfc7">saveName</a>)</td></tr>
+<tr class="memdesc:ac378f0cb50ff3008adba03a26e2f87ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загружает выбранную игры  <a href="class_game_field.html#ac378f0cb50ff3008adba03a26e2f87ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac378f0cb50ff3008adba03a26e2f87ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c5cc88b44f50cab633b30a5f8c86d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a59c5cc88b44f50cab633b30a5f8c86d5">processSave</a> ()</td></tr>
+<tr class="memdesc:a59c5cc88b44f50cab633b30a5f8c86d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает сигнал о сохранении после окончания игры  <a href="class_game_field.html#a59c5cc88b44f50cab633b30a5f8c86d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59c5cc88b44f50cab633b30a5f8c86d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa183123b38034d67c188f73b7ad1ebb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#aa183123b38034d67c188f73b7ad1ebb2">processDownload</a> ()</td></tr>
+<tr class="memdesc:aa183123b38034d67c188f73b7ad1ebb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает сигнал о сохранении после окончания игры  <a href="class_game_field.html#aa183123b38034d67c188f73b7ad1ebb2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa183123b38034d67c188f73b7ad1ebb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
@@ -175,6 +193,12 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 <tr class="memitem:a67dbd3b832be6ee886fde96f237d3b91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a67dbd3b832be6ee886fde96f237d3b91">storeBomb</a> (int rowId, int colId)</td></tr>
 <tr class="memdesc:a67dbd3b832be6ee886fde96f237d3b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает в БД местоположение бомбы  <a href="class_game_field.html#a67dbd3b832be6ee886fde96f237d3b91">Подробнее...</a><br /></td></tr>
 <tr class="separator:a67dbd3b832be6ee886fde96f237d3b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a62704abe1bb0414ca7e3a4c9faa3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a06a62704abe1bb0414ca7e3a4c9faa3b">finishGame</a> ()</td></tr>
+<tr class="memdesc:a06a62704abe1bb0414ca7e3a4c9faa3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ставит флаг завершения игры в БД  <a href="class_game_field.html#a06a62704abe1bb0414ca7e3a4c9faa3b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a06a62704abe1bb0414ca7e3a4c9faa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65aa64b56df840501cb619d02dccf11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#ae65aa64b56df840501cb619d02dccf11">makeSavedMove</a> (QSqlQuery query)</td></tr>
+<tr class="memdesc:ae65aa64b56df840501cb619d02dccf11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Делает сохраненный ход на основании записи из БД  <a href="class_game_field.html#ae65aa64b56df840501cb619d02dccf11">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae65aa64b56df840501cb619d02dccf11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Закрытые данные</h2></td></tr>
@@ -206,10 +230,18 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 <tr class="separator:a7708192b00fdc95d1f14fe262c66a1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1582111cdd762b7eb25397cce022f3c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a1582111cdd762b7eb25397cce022f3c1">isRepeat</a> = false</td></tr>
 <tr class="separator:a1582111cdd762b7eb25397cce022f3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f569efb469d43491d40a19506cddfc7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a2f569efb469d43491d40a19506cddfc7">saveName</a></td></tr>
+<tr class="separator:a2f569efb469d43491d40a19506cddfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d3d80c70d25b4487f0ae880247f745"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#ac2d3d80c70d25b4487f0ae880247f745">isSave</a> = false</td></tr>
+<tr class="separator:ac2d3d80c70d25b4487f0ae880247f745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58f7487d50daecedd309d867ab4da9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#ac58f7487d50daecedd309d867ab4da9d">stepNumber</a> = 0</td></tr>
 <tr class="separator:ac58f7487d50daecedd309d867ab4da9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dcecf18f875fb156b5f1c776342a90a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_over.html">GameOver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a1dcecf18f875fb156b5f1c776342a90a">gameOverModal</a></td></tr>
 <tr class="separator:a1dcecf18f875fb156b5f1c776342a90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0736438e97ff2c35f49e6c6d440b8da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_save_modal.html">SaveModal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#aa0736438e97ff2c35f49e6c6d440b8da">saveModal</a></td></tr>
+<tr class="separator:aa0736438e97ff2c35f49e6c6d440b8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab62ade766bf34b19bf4532288ecb37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_download_modal.html">DownloadModal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_field.html#a4ab62ade766bf34b19bf4532288ecb37">downloadModal</a></td></tr>
+<tr class="separator:a4ab62ade766bf34b19bf4532288ecb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Класс игрового окна </p>
@@ -284,6 +316,61 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 </div><div class="memdoc">
 
 <p>Проверяет, выйграта ли игра </p>
+
+</div>
+</div>
+<a id="ac378f0cb50ff3008adba03a26e2f87ad" name="ac378f0cb50ff3008adba03a26e2f87ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac378f0cb50ff3008adba03a26e2f87ad">&#9670;&#160;</a></span>downloadGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::downloadGame </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>saveName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Загружает выбранную игры </p>
+
+</div>
+</div>
+<a id="a06a62704abe1bb0414ca7e3a4c9faa3b" name="a06a62704abe1bb0414ca7e3a4c9faa3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a62704abe1bb0414ca7e3a4c9faa3b">&#9670;&#160;</a></span>finishGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::finishGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ставит флаг завершения игры в БД </p>
 
 </div>
 </div>
@@ -433,6 +520,34 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 
 </div>
 </div>
+<a id="ae65aa64b56df840501cb619d02dccf11" name="ae65aa64b56df840501cb619d02dccf11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65aa64b56df840501cb619d02dccf11">&#9670;&#160;</a></span>makeSavedMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::makeSavedMove </td>
+          <td>(</td>
+          <td class="paramtype">QSqlQuery&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Делает сохраненный ход на основании записи из БД </p>
+
+</div>
+</div>
 <a id="abbeb03f448c384150dc9c7cbdade88c8" name="abbeb03f448c384150dc9c7cbdade88c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbeb03f448c384150dc9c7cbdade88c8">&#9670;&#160;</a></span>openAll()</h2>
 
@@ -498,6 +613,33 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 
 </div>
 </div>
+<a id="aaada2e6af0b95a77b741a4d5d5f61d41" name="aaada2e6af0b95a77b741a4d5d5f61d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaada2e6af0b95a77b741a4d5d5f61d41">&#9670;&#160;</a></span>openDownloadModal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::openDownloadModal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Открывает модальное окно для загрузки </p>
+
+</div>
+</div>
 <a id="ae36f658ba3da3654d2f11c5aa4f36c27" name="ae36f658ba3da3654d2f11c5aa4f36c27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae36f658ba3da3654d2f11c5aa4f36c27">&#9670;&#160;</a></span>processComboBoxChange</h2>
 
@@ -523,6 +665,33 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 </div><div class="memdoc">
 
 <p>Отрабатывает изменение сложности </p>
+
+</div>
+</div>
+<a id="aa183123b38034d67c188f73b7ad1ebb2" name="aa183123b38034d67c188f73b7ad1ebb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa183123b38034d67c188f73b7ad1ebb2">&#9670;&#160;</a></span>processDownload</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::processDownload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает сигнал о сохранении после окончания игры </p>
 
 </div>
 </div>
@@ -602,6 +771,33 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 
 </div>
 </div>
+<a id="a59c5cc88b44f50cab633b30a5f8c86d5" name="a59c5cc88b44f50cab633b30a5f8c86d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c5cc88b44f50cab633b30a5f8c86d5">&#9670;&#160;</a></span>processSave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::processSave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает сигнал о сохранении после окончания игры </p>
+
+</div>
+</div>
 <a id="aeb6a037c23863e3f0aea4f6b9d8e3d41" name="aeb6a037c23863e3f0aea4f6b9d8e3d41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb6a037c23863e3f0aea4f6b9d8e3d41">&#9670;&#160;</a></span>restart</h2>
 
@@ -626,6 +822,34 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 </div><div class="memdoc">
 
 <p>Начинает игру заново </p>
+
+</div>
+</div>
+<a id="ad97d1e69afc89e241c97087bd4237fb2" name="ad97d1e69afc89e241c97087bd4237fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97d1e69afc89e241c97087bd4237fb2">&#9670;&#160;</a></span>saveGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::saveGame </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>saveName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сохраняет текущую игру </p>
 
 </div>
 </div>
@@ -680,6 +904,33 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 </div><div class="memdoc">
 
 <p>Показывает повтор предыдущей игры </p>
+
+</div>
+</div>
+<a id="a4c86f50a8d840c7d3ff60938a79e3ae0" name="a4c86f50a8d840c7d3ff60938a79e3ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c86f50a8d840c7d3ff60938a79e3ae0">&#9670;&#160;</a></span>showSaveModal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameField::showSaveModal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Открывает модальное окно для сохранения </p>
 
 </div>
 </div>
@@ -903,6 +1154,28 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 
 </div>
 </div>
+<a id="a4ab62ade766bf34b19bf4532288ecb37" name="a4ab62ade766bf34b19bf4532288ecb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab62ade766bf34b19bf4532288ecb37">&#9670;&#160;</a></span>downloadModal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_download_modal.html">DownloadModal</a>* GameField::downloadModal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aad19c17b437259c1fc845ddfb2e99955" name="aad19c17b437259c1fc845ddfb2e99955"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad19c17b437259c1fc845ddfb2e99955">&#9670;&#160;</a></span>fieldCells</h2>
 
@@ -1035,6 +1308,28 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
 
 </div>
 </div>
+<a id="ac2d3d80c70d25b4487f0ae880247f745" name="ac2d3d80c70d25b4487f0ae880247f745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d3d80c70d25b4487f0ae880247f745">&#9670;&#160;</a></span>isSave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameField::isSave = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af0f9fb3b80f27327bb3681c44d09a312" name="af0f9fb3b80f27327bb3681c44d09a312"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0f9fb3b80f27327bb3681c44d09a312">&#9670;&#160;</a></span>rowCellsNumber</h2>
 
@@ -1046,6 +1341,50 @@ $(document).ready(function(){initNavTree('class_game_field.html',''); initResiza
       <table class="memname">
         <tr>
           <td class="memname">int GameField::rowCellsNumber = 9</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0736438e97ff2c35f49e6c6d440b8da" name="aa0736438e97ff2c35f49e6c6d440b8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0736438e97ff2c35f49e6c6d440b8da">&#9670;&#160;</a></span>saveModal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_save_modal.html">SaveModal</a>* GameField::saveModal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f569efb469d43491d40a19506cddfc7" name="a2f569efb469d43491d40a19506cddfc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f569efb469d43491d40a19506cddfc7">&#9670;&#160;</a></span>saveName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString GameField::saveName</td>
         </tr>
       </table>
   </td>

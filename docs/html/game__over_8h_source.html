@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Saper<span id="projectnumber">&#160;01</span>
+   <div id="projectname">Saper<span id="projectnumber">&#160;0.1</span>
    </div>
-   <div id="projectbrief">Классический Сапер с функцией просмотра прошлой игры</div>
+   <div id="projectbrief">Saper game with savings</div>
   </td>
  </tr>
  </tbody>
@@ -109,22 +109,25 @@ $(document).ready(function(){initNavTree('game__over_8h_source.html',''); initRe
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_game_over.html#a9b8a96b71024dedaf0af994e3747d4ec">   16</a></span>    QString <a class="code hl_variable" href="class_game_over.html#a9b8a96b71024dedaf0af994e3747d4ec">message</a>;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span> slots:</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_over.html#ab68651dc5dc5a4bf882cfc1af118440c">sendRestart</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_over.html#aabacfbeb15a7700b409b1049655fde38">sendShowRepeat</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>signals:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_game_over.html#a8547f827d01ff662130c64450e4f6b96">   25</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_game_over.html#a8547f827d01ff662130c64450e4f6b96">restart</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_game_over.html#a339c15d13431a69c295c0d58f0b8e8db">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_game_over.html#a339c15d13431a69c295c0d58f0b8e8db">showRepeat</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">//SAPER_GAME_OVER_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_over.html#abb6be40d175dec293be3ccec80afec65">sendSave</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_over.html#a1e5b8bee25d436a13afbab64ca5ef5af">sendDownload</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>signals:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_game_over.html#a8547f827d01ff662130c64450e4f6b96">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_game_over.html#a8547f827d01ff662130c64450e4f6b96">restart</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_game_over.html#ae8a9d1f5182908bf5baa9c15afa10a5b">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_game_over.html#ae8a9d1f5182908bf5baa9c15afa10a5b">save</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_game_over.html#a2c7477c85b444ce5e0fd058385581b43">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_game_over.html#a2c7477c85b444ce5e0fd058385581b43">download</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span><span class="comment">//SAPER_GAME_OVER_H</span></div>
 <div class="ttc" id="aclass_game_over_html"><div class="ttname"><a href="class_game_over.html">GameOver</a></div><div class="ttdoc">Класс модального окна с сообщением о результате игры</div><div class="ttdef"><b>Definition:</b> game_over.h:8</div></div>
-<div class="ttc" id="aclass_game_over_html_a339c15d13431a69c295c0d58f0b8e8db"><div class="ttname"><a href="class_game_over.html#a339c15d13431a69c295c0d58f0b8e8db">GameOver::showRepeat</a></div><div class="ttdeci">void showRepeat()</div><div class="ttdoc">Сигнал о показе повтора игры</div></div>
+<div class="ttc" id="aclass_game_over_html_a1e5b8bee25d436a13afbab64ca5ef5af"><div class="ttname"><a href="class_game_over.html#a1e5b8bee25d436a13afbab64ca5ef5af">GameOver::sendDownload</a></div><div class="ttdeci">void sendDownload()</div><div class="ttdoc">Отправляет сигнал об открытии окна загрузки</div><div class="ttdef"><b>Definition:</b> game_over.cpp:23</div></div>
+<div class="ttc" id="aclass_game_over_html_a2c7477c85b444ce5e0fd058385581b43"><div class="ttname"><a href="class_game_over.html#a2c7477c85b444ce5e0fd058385581b43">GameOver::download</a></div><div class="ttdeci">void download()</div><div class="ttdoc">Сигнал об открытии окна загрузки</div></div>
 <div class="ttc" id="aclass_game_over_html_a5e9fc509b123d2891f030c191ebd5ba3"><div class="ttname"><a href="class_game_over.html#a5e9fc509b123d2891f030c191ebd5ba3">GameOver::ui</a></div><div class="ttdeci">Ui_GameOver ui</div><div class="ttdef"><b>Definition:</b> game_over.h:15</div></div>
 <div class="ttc" id="aclass_game_over_html_a8547f827d01ff662130c64450e4f6b96"><div class="ttname"><a href="class_game_over.html#a8547f827d01ff662130c64450e4f6b96">GameOver::restart</a></div><div class="ttdeci">void restart()</div><div class="ttdoc">Сигнал о начале новой игры</div></div>
 <div class="ttc" id="aclass_game_over_html_a9b8a96b71024dedaf0af994e3747d4ec"><div class="ttname"><a href="class_game_over.html#a9b8a96b71024dedaf0af994e3747d4ec">GameOver::message</a></div><div class="ttdeci">QString message</div><div class="ttdef"><b>Definition:</b> game_over.h:16</div></div>
-<div class="ttc" id="aclass_game_over_html_aabacfbeb15a7700b409b1049655fde38"><div class="ttname"><a href="class_game_over.html#aabacfbeb15a7700b409b1049655fde38">GameOver::sendShowRepeat</a></div><div class="ttdeci">void sendShowRepeat()</div><div class="ttdoc">Отправляет сигнал о показе повтора игры</div><div class="ttdef"><b>Definition:</b> game_over.cpp:17</div></div>
-<div class="ttc" id="aclass_game_over_html_ab1f82660b2e19dac734d895ceb46ffb9"><div class="ttname"><a href="class_game_over.html#ab1f82660b2e19dac734d895ceb46ffb9">GameOver::setMessage</a></div><div class="ttdeci">void setMessage(QString messageVal)</div><div class="ttdoc">Позволяет изменить сообщение окна извне</div><div class="ttdef"><b>Definition:</b> game_over.cpp:21</div></div>
-<div class="ttc" id="aclass_game_over_html_ab68651dc5dc5a4bf882cfc1af118440c"><div class="ttname"><a href="class_game_over.html#ab68651dc5dc5a4bf882cfc1af118440c">GameOver::sendRestart</a></div><div class="ttdeci">void sendRestart()</div><div class="ttdoc">Отправляет сигнал о начале новой игры</div><div class="ttdef"><b>Definition:</b> game_over.cpp:13</div></div>
+<div class="ttc" id="aclass_game_over_html_ab1f82660b2e19dac734d895ceb46ffb9"><div class="ttname"><a href="class_game_over.html#ab1f82660b2e19dac734d895ceb46ffb9">GameOver::setMessage</a></div><div class="ttdeci">void setMessage(QString messageVal)</div><div class="ttdoc">Позволяет изменить сообщение окна извне</div><div class="ttdef"><b>Definition:</b> game_over.cpp:28</div></div>
+<div class="ttc" id="aclass_game_over_html_ab68651dc5dc5a4bf882cfc1af118440c"><div class="ttname"><a href="class_game_over.html#ab68651dc5dc5a4bf882cfc1af118440c">GameOver::sendRestart</a></div><div class="ttdeci">void sendRestart()</div><div class="ttdoc">Отправляет сигнал о начале новой игры</div><div class="ttdef"><b>Definition:</b> game_over.cpp:15</div></div>
+<div class="ttc" id="aclass_game_over_html_abb6be40d175dec293be3ccec80afec65"><div class="ttname"><a href="class_game_over.html#abb6be40d175dec293be3ccec80afec65">GameOver::sendSave</a></div><div class="ttdeci">void sendSave()</div><div class="ttdoc">Отправляет сигнал об открытии окна сохранения</div><div class="ttdef"><b>Definition:</b> game_over.cpp:19</div></div>
+<div class="ttc" id="aclass_game_over_html_ae8a9d1f5182908bf5baa9c15afa10a5b"><div class="ttname"><a href="class_game_over.html#ae8a9d1f5182908bf5baa9c15afa10a5b">GameOver::save</a></div><div class="ttdeci">void save()</div><div class="ttdoc">Сигнал об открытии окна сохранения</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

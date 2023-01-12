@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rowcellsnumber_0',['rowCellsNumber',['../class_game_field.html#af0f9fb3b80f27327bb3681c44d09a312',1,'GameField']]],
-  ['rowid_1',['rowId',['../class_field_cell.html#acd26dd456427593bd52cb7abc6352075',1,'FieldCell']]]
+  ['message_0',['message',['../class_game_over.html#a9b8a96b71024dedaf0af994e3747d4ec',1,'GameOver']]]
 ];

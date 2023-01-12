@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['paint_0',['paint',['../class_field_cell.html#af2f14b236cca357c11205fdce3c8a27f',1,'FieldCell']]],
-  ['processcomboboxchange_1',['processComboBoxChange',['../class_game_field.html#ae36f658ba3da3654d2f11c5aa4f36c27',1,'GameField']]],
-  ['processleftcellclick_2',['processLeftCellClick',['../class_game_field.html#af8e652e302430ec80aae4919d98bbfd4',1,'GameField']]],
-  ['processrightcellclick_3',['processRightCellClick',['../class_game_field.html#a2feed9298963bed8b268b5d12cc7936c',1,'GameField']]]
+  ['open_0',['open',['../class_field_cell.html#a1ffa4a7265da21c2743abd6568385ce8',1,'FieldCell']]],
+  ['openall_1',['openAll',['../class_game_field.html#abbeb03f448c384150dc9c7cbdade88c8',1,'GameField']]],
+  ['openarea_2',['openArea',['../class_game_field.html#acbdee82d392aa7be509092745c36635d',1,'GameField']]],
+  ['opendownloadmodal_3',['openDownloadModal',['../class_game_field.html#aaada2e6af0b95a77b741a4d5d5f61d41',1,'GameField']]]
 ];

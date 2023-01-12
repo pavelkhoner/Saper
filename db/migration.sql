@@ -1,3 +1,4 @@
-create table if not exists Games(id integer primary key autoincrement, difficulty varchar(30), timestamp datetime default current_timestamp);
+create table if not exists Games(id integer primary key autoincrement, difficulty varchar(30), finished integer default 0, timestamp datetime default current_timestamp);
 create table if not exists Bombs(id integer primary key autoincrement, game_id integer not null references Games(id), row_id integer, col_id integer);
 create table if not exists Moves(id integer primary key autoincrement, game_id integer not null references Games(id), row_id integer, col_id integer, number integer, opened integer, flagged integer);
+create table if not exists Saves(id integer primary key autoincrement, move_id integer not null references Moves(id), name varchar(30));
